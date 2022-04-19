@@ -70,11 +70,7 @@
 				F66A3FB4280DDD8200E33B23 /* ViewController.swift */,
 				F66A3FB6280DDD8200E33B23 /* Main.storyboard */,
 				F66A3FB9280DDD8400E33B23 /* Assets.xcassets */,
-<<<<<<< HEAD
 				F66A3FC6280DFB3500E33B23 /* CustomTableViewCell.swift */,
-=======
-				F12C6DD7280E395C009D258C /* Jogo1ViewController.swift */,
->>>>>>> refs/remotes/origin/main
 				F66A3FBB280DDD8400E33B23 /* LaunchScreen.storyboard */,
 				F66A3FBE280DDD8400E33B23 /* Info.plist */,
 			);

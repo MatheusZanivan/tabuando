@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F12C6DD8280E395C009D258C /* Jogo1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C6DD7280E395C009D258C /* Jogo1ViewController.swift */; };
 		F66A3FB1280DDD8200E33B23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66A3FB0280DDD8200E33B23 /* AppDelegate.swift */; };
 		F66A3FB3280DDD8200E33B23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66A3FB2280DDD8200E33B23 /* SceneDelegate.swift */; };
 		F66A3FB5280DDD8200E33B23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66A3FB4280DDD8200E33B23 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F12C6DD7280E395C009D258C /* Jogo1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jogo1ViewController.swift; sourceTree = "<group>"; };
 		F66A3FAD280DDD8200E33B23 /* Tabuando.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tabuando.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F66A3FB0280DDD8200E33B23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F66A3FB2280DDD8200E33B23 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				F66A3FB4280DDD8200E33B23 /* ViewController.swift */,
 				F66A3FB6280DDD8200E33B23 /* Main.storyboard */,
 				F66A3FB9280DDD8400E33B23 /* Assets.xcassets */,
+				F12C6DD7280E395C009D258C /* Jogo1ViewController.swift */,
 				F66A3FBB280DDD8400E33B23 /* LaunchScreen.storyboard */,
 				F66A3FBE280DDD8400E33B23 /* Info.plist */,
 			);
@@ -141,6 +144,7 @@
 				F66A3FB5280DDD8200E33B23 /* ViewController.swift in Sources */,
 				F66A3FB1280DDD8200E33B23 /* AppDelegate.swift in Sources */,
 				F66A3FB3280DDD8200E33B23 /* SceneDelegate.swift in Sources */,
+				F12C6DD8280E395C009D258C /* Jogo1ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

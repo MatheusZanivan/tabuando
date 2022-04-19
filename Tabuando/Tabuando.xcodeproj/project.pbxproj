@@ -13,6 +13,9 @@
 		F66A3FB8280DDD8200E33B23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F66A3FB6280DDD8200E33B23 /* Main.storyboard */; };
 		F66A3FBA280DDD8400E33B23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F66A3FB9280DDD8400E33B23 /* Assets.xcassets */; };
 		F66A3FBD280DDD8400E33B23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F66A3FBB280DDD8400E33B23 /* LaunchScreen.storyboard */; };
+		F66A3FC7280DFB3500E33B23 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66A3FC6280DFB3500E33B23 /* CustomTableViewCell.swift */; };
+		F67380B0280F2A0700BF6F1D /* FaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67380AE280F2A0700BF6F1D /* FaseTableViewCell.swift */; };
+		F67380B1280F2A0700BF6F1D /* FaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F67380AF280F2A0700BF6F1D /* FaseTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		F66A3FB9280DDD8400E33B23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F66A3FBC280DDD8400E33B23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F66A3FBE280DDD8400E33B23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F66A3FC6280DFB3500E33B23 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		F67380AE280F2A0700BF6F1D /* FaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaseTableViewCell.swift; sourceTree = "<group>"; };
+		F67380AF280F2A0700BF6F1D /* FaseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FaseTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,26 @@
 		F66A3FAF280DDD8200E33B23 /* Tabuando */ = {
 			isa = PBXGroup;
 			children = (
+				F67380AB280F250E00BF6F1D /* Custom TableViewCell */,
 				F66A3FB0280DDD8200E33B23 /* AppDelegate.swift */,
 				F66A3FB2280DDD8200E33B23 /* SceneDelegate.swift */,
 				F66A3FB4280DDD8200E33B23 /* ViewController.swift */,
 				F66A3FB6280DDD8200E33B23 /* Main.storyboard */,
 				F66A3FB9280DDD8400E33B23 /* Assets.xcassets */,
+				F66A3FC6280DFB3500E33B23 /* CustomTableViewCell.swift */,
 				F66A3FBB280DDD8400E33B23 /* LaunchScreen.storyboard */,
 				F66A3FBE280DDD8400E33B23 /* Info.plist */,
 			);
 			path = Tabuando;
+			sourceTree = "<group>";
+		};
+		F67380AB280F250E00BF6F1D /* Custom TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F67380AE280F2A0700BF6F1D /* FaseTableViewCell.swift */,
+				F67380AF280F2A0700BF6F1D /* FaseTableViewCell.xib */,
+			);
+			path = "Custom TableViewCell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +142,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F67380B1280F2A0700BF6F1D /* FaseTableViewCell.xib in Resources */,
 				F66A3FBD280DDD8400E33B23 /* LaunchScreen.storyboard in Resources */,
 				F66A3FBA280DDD8400E33B23 /* Assets.xcassets in Resources */,
 				F66A3FB8280DDD8200E33B23 /* Main.storyboard in Resources */,
@@ -140,7 +158,9 @@
 			files = (
 				F66A3FB5280DDD8200E33B23 /* ViewController.swift in Sources */,
 				F66A3FB1280DDD8200E33B23 /* AppDelegate.swift in Sources */,
+				F66A3FC7280DFB3500E33B23 /* CustomTableViewCell.swift in Sources */,
 				F66A3FB3280DDD8200E33B23 /* SceneDelegate.swift in Sources */,
+				F67380B0280F2A0700BF6F1D /* FaseTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

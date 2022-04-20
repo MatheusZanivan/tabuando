@@ -162,11 +162,8 @@
 				F66A3FB1280DDD8200E33B23 /* AppDelegate.swift in Sources */,
 				F66A3FC7280DFB3500E33B23 /* CustomTableViewCell.swift in Sources */,
 				F66A3FB3280DDD8200E33B23 /* SceneDelegate.swift in Sources */,
-<<<<<<< HEAD
 				F67380B0280F2A0700BF6F1D /* FaseTableViewCell.swift in Sources */,
-=======
 				F12C6DD8280E395C009D258C /* Jogo1ViewController.swift in Sources */,
->>>>>>> refs/remotes/origin/main
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

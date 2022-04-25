@@ -34,7 +34,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         tabelaMain.register(customCell.nib(), forCellReuseIdentifier: customCell.identifier)
-        tabelaMain.separatorStyle = .none        
+        tabelaMain.separatorStyle = .none
+        
+        
+
         tabelaMain.dataSource = self
         tabelaMain.delegate = self
     }
@@ -45,10 +48,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tabelaMain.dequeueReusableCell(withIdentifier: customCell.identifier, for: indexPath) as! FaseTableViewCell
         
-        cell.nomeFase.text = fases[indexPath.row].nivel
-        cell.pontuacao.text = "\u{1F512}"
-                                
+        cell.faseBotao?.nomeFase?.text = fases[indexPath.row].nivel
+        cell.faseBotao?.tag = indexPath.row
+        cell.faseBotao?.addTarget(self, action: #selector(teste(_:)), for: .touchUpInside)
+        
         return cell
+    }
+    
+    @objc func teste(_ sender: FaseBotao) {
+        print("O botão no index \(sender.tag) foi apertado")
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

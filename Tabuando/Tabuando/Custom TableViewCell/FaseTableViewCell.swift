@@ -24,7 +24,7 @@ class FaseTableViewCell: UITableViewCell {
         self.addSubview(nomeFase)
         self.addSubview(pontuacao)
         self.clipsToBounds = true
-        self.backgroundColor = .lightGray
+        self.backgroundColor = .white
         self.contentView.layer.cornerRadius = 8
         self.layer.borderWidth = 2
         self.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)

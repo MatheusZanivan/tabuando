@@ -21,16 +21,23 @@ class Game1ViewController: UIViewController {
     
     
     @IBAction func submitResposta1(_ sender: UIButton) {
-        if(resposta1.title(for: .normal) == "\(tabuada.resposta)"){}
+        if(resposta1.title(for: .normal) == "\(tabuada.resposta)"){
+            
+        }
+            
+        }
     }
     
     @IBAction func submitResposta2(_ sender: UIButton) {
+        
     }
     
     @IBAction func submitResposta3(_ sender: UIButton) {
+        
     }
     
     @IBAction func submitResposta4(_ sender: UIButton) {
+        
     }
     
     override func viewDidLoad() {
@@ -40,9 +47,12 @@ class Game1ViewController: UIViewController {
         resposta2.setTitle("\(tabuada.respostaErrada1)", for: .normal)
         resposta3.setTitle("\(tabuada.respostaErrada2)", for: .normal)
         resposta4.setTitle("\(tabuada.respostaErrada3)", for: .normal)
+    
+    func acertos(){
         
     }
-
+        
+    }
 
     
     

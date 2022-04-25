@@ -21,15 +21,19 @@ class Game1ViewController: UIViewController {
     
     
     @IBAction func submitResposta1(_ sender: UIButton) {
+        
     }
     
     @IBAction func submitResposta2(_ sender: UIButton) {
+        
     }
     
     @IBAction func submitResposta3(_ sender: UIButton) {
+        
     }
     
     @IBAction func submitResposta4(_ sender: UIButton) {
+        
     }
     
     override func viewDidLoad() {
@@ -41,7 +45,10 @@ class Game1ViewController: UIViewController {
         resposta4.setTitle("\(tabuada.respostaErrada3)", for: .normal)
         
     }
-
+    
+    func acertos(){
+        
+    }
 
     
     

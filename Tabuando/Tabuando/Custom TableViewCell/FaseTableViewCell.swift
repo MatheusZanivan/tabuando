@@ -9,8 +9,7 @@ import UIKit
 
 class FaseTableViewCell: UITableViewCell {
 
-    var nomeFase = UILabel()
-    var pontuacao = UILabel()
+    public weak var faseBotao: FaseBotao?
     
     public let identifier = "FaseTableViewCell"
     
@@ -21,25 +20,24 @@ class FaseTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.addSubview(nomeFase)
-        self.addSubview(pontuacao)
-        self.clipsToBounds = true
-        self.backgroundColor = .white
-        self.contentView.layer.cornerRadius = 8
-        self.layer.borderWidth = 2
-        self.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
-        self.layer.cornerRadius = 40
+        let faseBotao = FaseBotao()
         
-        nomeFase.translatesAutoresizingMaskIntoConstraints = false
-        pontuacao.translatesAutoresizingMaskIntoConstraints = false
+        faseBotao.translatesAutoresizingMaskIntoConstraints = false
+        
+        faseBotao.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
+        faseBotao.layer.borderWidth = 1
+        faseBotao.layer.cornerRadius = 5
+        
+        addSubview(faseBotao)
         
         NSLayoutConstraint.activate([
-            nomeFase.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            nomeFase.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            
-            pontuacao.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            pontuacao.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -30)
+            faseBotao.centerXAnchor.constraint(equalTo: centerXAnchor),
+            faseBotao.centerYAnchor.constraint(equalTo: centerYAnchor),
+            faseBotao.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.8),
+            faseBotao.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.8)
         ])
+        
+        self.faseBotao = faseBotao
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

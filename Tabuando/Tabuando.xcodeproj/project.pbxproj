@@ -19,6 +19,7 @@
 		F66A3FC7280DFB3500E33B23 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66A3FC6280DFB3500E33B23 /* CustomTableViewCell.swift */; };
 		F67380B0280F2A0700BF6F1D /* FaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67380AE280F2A0700BF6F1D /* FaseTableViewCell.swift */; };
 		F67380B1280F2A0700BF6F1D /* FaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F67380AF280F2A0700BF6F1D /* FaseTableViewCell.xib */; };
+		F6D6433728109F7000AAC8C8 /* FaseBotao.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D6433628109F7000AAC8C8 /* FaseBotao.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		F66A3FC6280DFB3500E33B23 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		F67380AE280F2A0700BF6F1D /* FaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaseTableViewCell.swift; sourceTree = "<group>"; };
 		F67380AF280F2A0700BF6F1D /* FaseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FaseTableViewCell.xib; sourceTree = "<group>"; };
+		F6D6433628109F7000AAC8C8 /* FaseBotao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaseBotao.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			children = (
 				F67380AE280F2A0700BF6F1D /* FaseTableViewCell.swift */,
 				F67380AF280F2A0700BF6F1D /* FaseTableViewCell.xib */,
+				F6D6433628109F7000AAC8C8 /* FaseBotao.swift */,
 			);
 			path = "Custom TableViewCell";
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 				F66A3FB3280DDD8200E33B23 /* SceneDelegate.swift in Sources */,
 				8225FE48280F9C9C0081266C /* Game1ViewController.swift in Sources */,
 				F67380B0280F2A0700BF6F1D /* FaseTableViewCell.swift in Sources */,
+				F6D6433728109F7000AAC8C8 /* FaseBotao.swift in Sources */,
 				8225FE4B280FAE940081266C /* Tabuada.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

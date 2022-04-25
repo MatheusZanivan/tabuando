@@ -21,7 +21,9 @@ class Game1ViewController: UIViewController {
     
     
     @IBAction func submitResposta1(_ sender: UIButton) {
-        
+        if(resposta1.title(for: .normal) == "\(tabuada.resposta)"){
+            
+        }
     }
     
     @IBAction func submitResposta2(_ sender: UIButton) {

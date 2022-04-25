@@ -35,6 +35,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         tabelaMain.register(customCell.nib(), forCellReuseIdentifier: customCell.identifier)
         tabelaMain.separatorStyle = .none
+        
+        
 
         tabelaMain.dataSource = self
         tabelaMain.delegate = self

@@ -20,18 +20,7 @@ class FaseTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-<<<<<<< HEAD
-        self.addSubview(nomeFase)
-        self.addSubview(pontuacao)
-        self.clipsToBounds = true
-        self.backgroundColor = .white
-        self.contentView.layer.cornerRadius = 8
-        self.layer.borderWidth = 2
-        self.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
-        self.layer.cornerRadius = 40
-=======
         let faseBotao = FaseBotao()
->>>>>>> 83ae487623a05ad7e7cb3617bf60a851470e8424
         
         faseBotao.translatesAutoresizingMaskIntoConstraints = false
         

@@ -24,8 +24,6 @@ class Game1ViewController: UIViewController {
         if(resposta1.title(for: .normal) == "\(tabuada.resposta)"){
             
         }
-            
-        }
     }
     
     @IBAction func submitResposta2(_ sender: UIButton) {
@@ -47,10 +45,10 @@ class Game1ViewController: UIViewController {
         resposta2.setTitle("\(tabuada.respostaErrada1)", for: .normal)
         resposta3.setTitle("\(tabuada.respostaErrada2)", for: .normal)
         resposta4.setTitle("\(tabuada.respostaErrada3)", for: .normal)
-    
-    func acertos(){
         
     }
+    
+    func acertos(){
         
     }
 

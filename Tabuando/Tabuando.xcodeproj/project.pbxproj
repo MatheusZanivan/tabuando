@@ -10,26 +10,29 @@
 		8225FE48280F9C9C0081266C /* Game1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8225FE46280F9C9C0081266C /* Game1ViewController.swift */; };
 		8225FE49280F9C9C0081266C /* Game1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8225FE47280F9C9C0081266C /* Game1ViewController.xib */; };
 		8225FE4B280FAE940081266C /* Tabuada.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8225FE4A280FAE940081266C /* Tabuada.swift */; };
+		F632A75A281B097E001F6B7F /* Tabuada2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F632A759281B097E001F6B7F /* Tabuada2.swift */; };
 		F66A3FB1280DDD8200E33B23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66A3FB0280DDD8200E33B23 /* AppDelegate.swift */; };
 		F66A3FB3280DDD8200E33B23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66A3FB2280DDD8200E33B23 /* SceneDelegate.swift */; };
-		F66A3FB5280DDD8200E33B23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66A3FB4280DDD8200E33B23 /* ViewController.swift */; };
+		F66A3FB5280DDD8200E33B23 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66A3FB4280DDD8200E33B23 /* Main.swift */; };
 		F66A3FB8280DDD8200E33B23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F66A3FB6280DDD8200E33B23 /* Main.storyboard */; };
 		F66A3FBA280DDD8400E33B23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F66A3FB9280DDD8400E33B23 /* Assets.xcassets */; };
 		F66A3FBD280DDD8400E33B23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F66A3FBB280DDD8400E33B23 /* LaunchScreen.storyboard */; };
 		F66A3FC7280DFB3500E33B23 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66A3FC6280DFB3500E33B23 /* CustomTableViewCell.swift */; };
 		F67380B0280F2A0700BF6F1D /* FaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67380AE280F2A0700BF6F1D /* FaseTableViewCell.swift */; };
 		F67380B1280F2A0700BF6F1D /* FaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F67380AF280F2A0700BF6F1D /* FaseTableViewCell.xib */; };
+		F67F7728281B6BAD006BA457 /* tituloDaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67F7727281B6BAD006BA457 /* tituloDaCell.swift */; };
 		F6D6433728109F7000AAC8C8 /* FaseBotao.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D6433628109F7000AAC8C8 /* FaseBotao.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8225FE46280F9C9C0081266C /* Game1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Game1ViewController.swift; path = Games/Game1ViewController.swift; sourceTree = "<group>"; };
-		8225FE47280F9C9C0081266C /* Game1ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Game1ViewController.xib; path = Games/Game1ViewController.xib; sourceTree = "<group>"; };
+		8225FE46280F9C9C0081266C /* Game1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game1ViewController.swift; sourceTree = "<group>"; };
+		8225FE47280F9C9C0081266C /* Game1ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Game1ViewController.xib; sourceTree = "<group>"; };
 		8225FE4A280FAE940081266C /* Tabuada.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabuada.swift; sourceTree = "<group>"; };
+		F632A759281B097E001F6B7F /* Tabuada2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabuada2.swift; sourceTree = "<group>"; };
 		F66A3FAD280DDD8200E33B23 /* Tabuando.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tabuando.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F66A3FB0280DDD8200E33B23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F66A3FB2280DDD8200E33B23 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F66A3FB4280DDD8200E33B23 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F66A3FB4280DDD8200E33B23 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Main.swift; path = ../Main.swift; sourceTree = "<group>"; };
 		F66A3FB7280DDD8200E33B23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F66A3FB9280DDD8400E33B23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F66A3FBC280DDD8400E33B23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +40,7 @@
 		F66A3FC6280DFB3500E33B23 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		F67380AE280F2A0700BF6F1D /* FaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaseTableViewCell.swift; sourceTree = "<group>"; };
 		F67380AF280F2A0700BF6F1D /* FaseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FaseTableViewCell.xib; sourceTree = "<group>"; };
+		F67F7727281B6BAD006BA457 /* tituloDaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tituloDaCell.swift; sourceTree = "<group>"; };
 		F6D6433628109F7000AAC8C8 /* FaseBotao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaseBotao.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -51,6 +55,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F632A757281B0950001F6B7F /* tabuadas */ = {
+			isa = PBXGroup;
+			children = (
+				8225FE4A280FAE940081266C /* Tabuada.swift */,
+				F632A759281B097E001F6B7F /* Tabuada2.swift */,
+			);
+			path = tabuadas;
+			sourceTree = "<group>";
+		};
+		F632A75B281B0995001F6B7F /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				F66A3FB2280DDD8200E33B23 /* SceneDelegate.swift */,
+				F66A3FB0280DDD8200E33B23 /* AppDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		F632A75C281B09CA001F6B7F /* Telas */ = {
+			isa = PBXGroup;
+			children = (
+				F67380AB280F250E00BF6F1D /* Custom TableViewCell */,
+				F66A3FBB280DDD8400E33B23 /* LaunchScreen.storyboard */,
+				F66A3FB4280DDD8200E33B23 /* Main.swift */,
+				F66A3FB6280DDD8200E33B23 /* Main.storyboard */,
+				8225FE46280F9C9C0081266C /* Game1ViewController.swift */,
+				8225FE47280F9C9C0081266C /* Game1ViewController.xib */,
+			);
+			path = Telas;
+			sourceTree = "<group>";
+		};
 		F66A3FA4280DDD8200E33B23 = {
 			isa = PBXGroup;
 			children = (
@@ -70,18 +105,11 @@
 		F66A3FAF280DDD8200E33B23 /* Tabuando */ = {
 			isa = PBXGroup;
 			children = (
-				F67380AB280F250E00BF6F1D /* Custom TableViewCell */,
-				F66A3FB0280DDD8200E33B23 /* AppDelegate.swift */,
-				F66A3FB2280DDD8200E33B23 /* SceneDelegate.swift */,
-				F66A3FB4280DDD8200E33B23 /* ViewController.swift */,
-				8225FE4A280FAE940081266C /* Tabuada.swift */,
-				F66A3FB6280DDD8200E33B23 /* Main.storyboard */,
-				8225FE46280F9C9C0081266C /* Game1ViewController.swift */,
-				8225FE47280F9C9C0081266C /* Game1ViewController.xib */,
-				F66A3FB9280DDD8400E33B23 /* Assets.xcassets */,
-				F66A3FC6280DFB3500E33B23 /* CustomTableViewCell.swift */,
-				F66A3FBB280DDD8400E33B23 /* LaunchScreen.storyboard */,
+				F632A75C281B09CA001F6B7F /* Telas */,
+				F632A75B281B0995001F6B7F /* Delegate */,
+				F632A757281B0950001F6B7F /* tabuadas */,
 				F66A3FBE280DDD8400E33B23 /* Info.plist */,
+				F66A3FB9280DDD8400E33B23 /* Assets.xcassets */,
 			);
 			path = Tabuando;
 			sourceTree = "<group>";
@@ -89,9 +117,11 @@
 		F67380AB280F250E00BF6F1D /* Custom TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				F66A3FC6280DFB3500E33B23 /* CustomTableViewCell.swift */,
 				F67380AE280F2A0700BF6F1D /* FaseTableViewCell.swift */,
 				F67380AF280F2A0700BF6F1D /* FaseTableViewCell.xib */,
 				F6D6433628109F7000AAC8C8 /* FaseBotao.swift */,
+				F67F7727281B6BAD006BA457 /* tituloDaCell.swift */,
 			);
 			path = "Custom TableViewCell";
 			sourceTree = "<group>";
@@ -169,12 +199,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F66A3FB5280DDD8200E33B23 /* ViewController.swift in Sources */,
+				F66A3FB5280DDD8200E33B23 /* Main.swift in Sources */,
 				F66A3FB1280DDD8200E33B23 /* AppDelegate.swift in Sources */,
 				F66A3FC7280DFB3500E33B23 /* CustomTableViewCell.swift in Sources */,
 				F66A3FB3280DDD8200E33B23 /* SceneDelegate.swift in Sources */,
 				8225FE48280F9C9C0081266C /* Game1ViewController.swift in Sources */,
+				F67F7728281B6BAD006BA457 /* tituloDaCell.swift in Sources */,
 				F67380B0280F2A0700BF6F1D /* FaseTableViewCell.swift in Sources */,
+				F632A75A281B097E001F6B7F /* Tabuada2.swift in Sources */,
 				F6D6433728109F7000AAC8C8 /* FaseBotao.swift in Sources */,
 				8225FE4B280FAE940081266C /* Tabuada.swift in Sources */,
 			);

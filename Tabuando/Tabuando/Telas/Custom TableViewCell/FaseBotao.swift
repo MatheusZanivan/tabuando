@@ -13,6 +13,7 @@ class FaseBotao: UIControl {
     public weak var nomeFase: UILabel?
     public weak var pontuacao: UILabel?
     public weak var cadeado: UIImageView?
+    public weak var imageTitle: UIImageView?
     
     private var image: UIImage {
         return isLocked ? UIImage(systemName: "lock.fill")!.withTintColor(.black, renderingMode: .alwaysOriginal) : UIImage(systemName: "lock.fill")!.withTintColor(.clear, renderingMode: .alwaysOriginal)
@@ -47,7 +48,7 @@ class FaseBotao: UIControl {
         addSubview(cadeado)
         
         clipsToBounds = true
-        backgroundColor = .systemRed
+        backgroundColor = .systemGray5
         
         nomeFase.translatesAutoresizingMaskIntoConstraints = false
         pontuacao.translatesAutoresizingMaskIntoConstraints = false

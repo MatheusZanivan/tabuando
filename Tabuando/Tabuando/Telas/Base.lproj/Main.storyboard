@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="btW-2p-6wi">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -64,6 +61,7 @@
                                     <color key="baseBackgroundColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="submitResposta1:" destination="btW-2p-6wi" eventType="touchUpInside" id="1lV-xt-E0b"/>
                                     <action selector="submitResposta2:" destination="btW-2p-6wi" eventType="touchUpInside" id="lEd-vS-G1c"/>
                                 </connections>
                             </button>
@@ -76,6 +74,7 @@
                                     <color key="baseBackgroundColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="submitResposta1:" destination="btW-2p-6wi" eventType="touchUpInside" id="VQ3-LN-xdc"/>
                                     <action selector="submitResposta3:" destination="btW-2p-6wi" eventType="touchUpInside" id="Pej-7H-G7U"/>
                                 </connections>
                             </button>
@@ -88,6 +87,7 @@
                                     <color key="baseBackgroundColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="submitResposta1:" destination="btW-2p-6wi" eventType="touchUpInside" id="1Bo-s4-5GC"/>
                                     <action selector="submitResposta4:" destination="btW-2p-6wi" eventType="touchUpInside" id="mUn-RK-MaB"/>
                                 </connections>
                             </button>

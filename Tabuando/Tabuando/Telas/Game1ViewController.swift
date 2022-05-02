@@ -21,30 +21,20 @@ class Game1ViewController: UIViewController {
     
     
     @IBAction func submitResposta1(_ sender: UIButton) {
-        if(resposta1.title(for: .normal) == "\(tabuada.resposta)"){
+        if(resposta1.title(for: .normal) == "\(tabuada.produto)"){
             
         }
     }
     
-    @IBAction func submitResposta2(_ sender: UIButton) {
-        
-    }
     
-    @IBAction func submitResposta3(_ sender: UIButton) {
-        
-    }
-    
-    @IBAction func submitResposta4(_ sender: UIButton) {
-        
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         pergunta.text = "\(tabuada.multiplicando) x \(tabuada.multiplicador) ="
-        resposta1.setTitle("\(tabuada.resposta)", for: .normal)
-        resposta2.setTitle("\(tabuada.respostaErrada1)", for: .normal)
-        resposta3.setTitle("\(tabuada.respostaErrada2)", for: .normal)
-        resposta4.setTitle("\(tabuada.respostaErrada3)", for: .normal)
+        resposta1.setTitle("\(tabuada.produto)", for: .normal)
+        resposta2.setTitle("\(tabuada.resposta1)", for: .normal)
+        resposta3.setTitle("\(tabuada.resposta2)", for: .normal)
+        resposta4.setTitle("\(tabuada.resposta3)", for: .normal)
         
     }
     

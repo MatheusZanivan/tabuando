@@ -51,8 +51,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //        self.view.addSubview(titleImage)
         self.view.addSubview(tableView)
         
+        
+        
         view.sendSubviewToBack(backgroundImage)
         
+//        view.sendSubviewToBack(tableView)
         
         
         backgroundImage.translatesAutoresizingMaskIntoConstraints = false
@@ -60,7 +63,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //        titleImage.translatesAutoresizingMaskIntoConstraints = false
         
 //        titleImage.image = UIImage(named: "Tabuando.png")
-        backgroundImage.image = UIImage(named: "Fundo.png")
+        backgroundImage.image = UIImage(named: "Fundo")
         backgroundImage.isUserInteractionEnabled = true
         backgroundImage.isMultipleTouchEnabled = true
         
@@ -103,6 +106,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return fases.count
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: customCell.identifier, for: indexPath) as! FaseTableViewCell
         
@@ -125,7 +129,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
+        
     }
+    
 //    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
 //        var rodrigo = "OSAKFKVSDJG"
 //        return rodrigo

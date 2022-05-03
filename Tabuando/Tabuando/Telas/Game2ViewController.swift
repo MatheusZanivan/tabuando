@@ -44,7 +44,7 @@ class Game2ViewController: UIViewController {
     //bloco acionado sempre que um dos botoes de resposta for acionado
     @IBAction func answerButtonPressed(_ sender: UIButton) {
         
-        let userAnswer = sender.currentTitle!
+        let userAnswer = sender.currentTitle!   "
         let actualAnswer = listaDeTabuadas[questionNumber].answer
         
         if userAnswer == actualAnswer{

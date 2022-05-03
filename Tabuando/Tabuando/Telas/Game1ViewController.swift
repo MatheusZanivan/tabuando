@@ -232,9 +232,9 @@ class Game1ViewController: UIViewController {
             resposta4Label.centerYAnchor.constraint(equalTo: resposta4View.centerYAnchor),
         ])
         
-        
-        pegarProximaTabuada()
-        updateUI()
+        self.desafioLabel = desafioLabel
+//        pegarProximaTabuada()
+//        updateUI()
     }
     
     
@@ -257,7 +257,7 @@ class Game1ViewController: UIViewController {
         print("Respostas: \(respostas)")
         
         
-        pergunta.text = "\(tabuada.multiplicando) x \(tabuada.multiplicador) ="
+        desafioLabel.text = "\(tabuada.multiplicando) x \(tabuada.multiplicador) ="
         resposta1.setTitle(respostas[0], for: .normal)
         resposta2.setTitle(respostas[1], for: .normal)
         resposta3.setTitle(respostas[2], for: .normal)

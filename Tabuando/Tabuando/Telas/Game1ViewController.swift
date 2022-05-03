@@ -77,7 +77,7 @@ class Game1ViewController: UIViewController {
         resposta4.setTitle(respostas[3], for: .normal)
     }
     
-    
+    //*** revisar cases por causa do desafio ***
     func pegarListaDeTabuadas() -> [Tabuada]{
         switch(numeroDaLista){
             case 1: return Desafios.tabuadaDoUm;

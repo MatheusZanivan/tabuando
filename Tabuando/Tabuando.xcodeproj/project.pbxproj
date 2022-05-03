@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8225FE48280F9C9C0081266C /* Game1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8225FE46280F9C9C0081266C /* Game1ViewController.swift */; };
-		8225FE49280F9C9C0081266C /* Game1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8225FE47280F9C9C0081266C /* Game1ViewController.xib */; };
 		8225FE4B280FAE940081266C /* Tabuada.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8225FE4A280FAE940081266C /* Tabuada.swift */; };
 		F632A75A281B097E001F6B7F /* Tabuada2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F632A759281B097E001F6B7F /* Tabuada2.swift */; };
 		F66A3FB1280DDD8200E33B23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66A3FB0280DDD8200E33B23 /* AppDelegate.swift */; };
@@ -26,7 +25,6 @@
 
 /* Begin PBXFileReference section */
 		8225FE46280F9C9C0081266C /* Game1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game1ViewController.swift; sourceTree = "<group>"; };
-		8225FE47280F9C9C0081266C /* Game1ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Game1ViewController.xib; sourceTree = "<group>"; };
 		8225FE4A280FAE940081266C /* Tabuada.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabuada.swift; sourceTree = "<group>"; };
 		F632A759281B097E001F6B7F /* Tabuada2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabuada2.swift; sourceTree = "<group>"; };
 		F66A3FAD280DDD8200E33B23 /* Tabuando.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tabuando.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,7 +79,6 @@
 				F66A3FB4280DDD8200E33B23 /* Main.swift */,
 				F66A3FB6280DDD8200E33B23 /* Main.storyboard */,
 				8225FE46280F9C9C0081266C /* Game1ViewController.swift */,
-				8225FE47280F9C9C0081266C /* Game1ViewController.xib */,
 			);
 			path = Telas;
 			sourceTree = "<group>";
@@ -187,7 +184,6 @@
 				F67380B1280F2A0700BF6F1D /* FaseTableViewCell.xib in Resources */,
 				F66A3FBD280DDD8400E33B23 /* LaunchScreen.storyboard in Resources */,
 				F66A3FBA280DDD8400E33B23 /* Assets.xcassets in Resources */,
-				8225FE49280F9C9C0081266C /* Game1ViewController.xib in Resources */,
 				F66A3FB8280DDD8200E33B23 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

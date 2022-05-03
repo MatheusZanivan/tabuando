@@ -18,7 +18,7 @@ struct Tabuada{
     let fase: String
 }
 
-class Desafios {
+public class Desafios {
     static let tabuadaDoUm : [Tabuada] = [
         Tabuada(multiplicando: 1, multiplicador: 1, produto: 1, resposta1: 11,resposta2: 10,resposta3: 3,resposta4: 0,fase:"1x?"),
         Tabuada(multiplicando: 1, multiplicador: 2, produto: 2,resposta1: 10,resposta2: 6,resposta3: 8,resposta4: 0,fase:"1x?"),

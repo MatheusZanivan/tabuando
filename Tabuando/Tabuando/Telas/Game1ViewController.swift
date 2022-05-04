@@ -149,21 +149,15 @@ class Game1ViewController: UIViewController {
             resposta1Button.topAnchor.constraint(equalTo: centralizadorView.topAnchor),
             resposta1Button.leftAnchor.constraint(equalTo: centralizadorView.leftAnchor),
             
-            
-            
-            
             resposta2Button.widthAnchor.constraint(equalToConstant: 110),
             resposta2Button.heightAnchor.constraint(equalToConstant: 110),
             resposta2Button.topAnchor.constraint(equalTo: centralizadorView.topAnchor),
             resposta2Button.rightAnchor.constraint(equalTo: centralizadorView.rightAnchor),
-            
-            
-            
+
             resposta3Button.widthAnchor.constraint(equalToConstant: 110),
             resposta3Button.heightAnchor.constraint(equalToConstant: 110),
             resposta3Button.bottomAnchor.constraint(equalTo: centralizadorView.bottomAnchor),
             resposta3Button.leftAnchor.constraint(equalTo: centralizadorView.leftAnchor),
-            
             
             resposta4Button.widthAnchor.constraint(equalToConstant: 110),
             resposta4Button.heightAnchor.constraint(equalToConstant: 110),

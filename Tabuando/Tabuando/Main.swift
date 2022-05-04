@@ -115,6 +115,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.faseBotao?.tag = indexPath.row
         cell.faseBotao?.addTarget(self, action: #selector(teste(_:)), for: .touchUpInside)
         
+        
         return cell
     }
     
@@ -125,6 +126,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             sender.alpha = 1.0
         }
     }
+    
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)

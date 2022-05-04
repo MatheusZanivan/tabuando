@@ -19,7 +19,6 @@ class Game2ViewController: UIViewController {
     @IBOutlet weak var trueButton: UIButton!
     @IBOutlet weak var falseButton: UIButton!
     
-    
     // Esse numero vai vir do clique do botao da listagem
     var numeroDaLista = 1
 
@@ -42,19 +41,35 @@ class Game2ViewController: UIViewController {
 
 
     //bloco acionado sempre que um dos botoes de resposta for acionado
-    @IBAction func answerButtonPressed(_ sender: UIButton) {
-        
-        let userAnswer = sender.currentTitle!   "
+    
+    
+    @IBAction func answerTrueButton(_ sender: UIButton) {
+        submitAnswer(userAnswer: "True", sender: sender)
+    }
+    
+    
+    @IBAction func answerFalseButton(_ sender: UIButton) {
+        submitAnswer(userAnswer: "False", sender: sender)
+    }
+    
+    
+    func submitAnswer(userAnswer: String, sender: UIButton){
         let actualAnswer = listaDeTabuadas[questionNumber].answer
         
-        if userAnswer == actualAnswer{
+        //print(userAnswer)
+        print(actualAnswer)
+        
+        if (userAnswer == actualAnswer) {
+            print("Correct!")
             sender.backgroundColor = UIColor.green
         } else {
+            print("Wrong!")
             sender.backgroundColor = UIColor.red
         }
         
         if questionNumber + 1 < listaDeTabuadas.count{
             questionNumber += 1
+            tabuada2 = listaDeTabuadas[questionNumber]
         } else {
             terminarTeste()
             return
@@ -64,12 +79,15 @@ class Game2ViewController: UIViewController {
         
     }
     
+    
+    
     func terminarTeste() {
         // TODO: chamar a tela de score
     }
     
     
     @objc func updateUI(){
+        print("Updating UI...")
         tituloTabuada.text = "\(tabuada2.fase)"
         multiplicando.text = "\(tabuada2.multiplicando)"
         multiplicador.text = "\(tabuada2.multiplicador)"

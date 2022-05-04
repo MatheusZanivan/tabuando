@@ -257,7 +257,7 @@ class Game1ViewController: UIViewController {
         print("Respostas: \(respostas)")
         
         
-        desafioLabel.text = "\(tabuada.multiplicando) x \(tabuada.multiplicador) ="
+        pergunta.text = "\(tabuada.multiplicando) x \(tabuada.multiplicador) ="
         resposta1.setTitle(respostas[0], for: .normal)
         resposta2.setTitle(respostas[1], for: .normal)
         resposta3.setTitle(respostas[2], for: .normal)

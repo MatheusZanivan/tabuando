@@ -178,7 +178,7 @@ class Game1ViewController: UIViewController {
         self.centralizadorView = centralizadorView
     }
     @objc func resposta(_ sender: UIButton){
-//        print(sender.tag)
+        print(sender.tag)
     }
    
 }

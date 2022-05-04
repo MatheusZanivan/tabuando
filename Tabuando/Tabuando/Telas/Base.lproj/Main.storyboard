@@ -109,6 +109,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Ativo 1" translatesAutoresizingMaskIntoConstraints="NO" id="67A-48-MS8">
+                                <rect key="frame" x="83" y="294" width="240" height="284"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6KZ-cf-diQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -124,10 +128,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YCU-nF-0YY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1922" y="-15"/>
+            <point key="canvasLocation" x="1921.7391304347827" y="-15.401785714285714"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Ativo 1" width="341" height="427"/>
         <image name="Ativo 15" width="341" height="341"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

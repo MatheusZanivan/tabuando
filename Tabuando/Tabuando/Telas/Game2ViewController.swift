@@ -41,8 +41,6 @@ class Game2ViewController: UIViewController {
 
 
     //bloco acionado sempre que um dos botoes de resposta for acionado
-    
-    
     @IBAction func answerTrueButton(_ sender: UIButton) {
         submitAnswer(userAnswer: "True", sender: sender)
     }

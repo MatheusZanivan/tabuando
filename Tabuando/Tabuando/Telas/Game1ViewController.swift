@@ -19,9 +19,21 @@ class Game1ViewController: UIViewController {
     private weak var resposta3Button: UIButton?
     private weak var resposta4Button: UIButton?
     private weak var centralizadorView: UIView?
+    
+    // Esse numero vai vir do clique do botao da listagem
+    var numeroDaLista = 1
+    
+    // Lidar com a tabuada corrente
+    var listaDeTabuadas: [Tabuada] = []
+    var tabuada: Tabuada!
+    var questionNumber = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // inicializar objetos de tabuadas
+        listaDeTabuadas = pegarListaDeTabuadas()
+        tabuada = listaDeTabuadas[questionNumber]
         
         let faseImage = UIImageView()
         let faseLabel = UILabel()
@@ -34,8 +46,6 @@ class Game1ViewController: UIViewController {
         let resposta3Button = UIButton()
         let resposta4Button = UIButton()
         let centralizadorView = UIView()
-        
-       
         
         self.view.addSubview(faseImage)
         faseImage.addSubview(faseLabel)
@@ -56,14 +66,12 @@ class Game1ViewController: UIViewController {
         
         faseImage.image = UIImage(named: "Ativo 15")
         
-        faseLabel.text = "1x?"
         faseLabel.font = UIFont.systemFont(ofSize: 26)
         faseLabel.textColor = .white
         
         desafioView.backgroundColor = .systemYellow
         desafioView.layer.cornerRadius = 20
         desafioLabel.textAlignment = .center
-        desafioLabel.text = "1 x 1 = "
         desafioLabel.font = UIFont.systemFont(ofSize: 50)
         desafioLabel.textColor = .white
         
@@ -72,29 +80,21 @@ class Game1ViewController: UIViewController {
         
         resposta1Button.backgroundColor = .systemPurple
         resposta1Button.layer.cornerRadius = 27
-        resposta1Button.setTitle("1", for: .normal)
         resposta1Button.tag = 1
         resposta1Button.addTarget(self, action: #selector(resposta(_:)), for: .touchUpInside)
         
-//        resposta1Label.text = "1"
-        
-        
-        
         resposta2Button.backgroundColor = .systemPurple
         resposta2Button.layer.cornerRadius = 27
-//        resposta2Label.text = "1"
         resposta2Button.tag = 2
         resposta2Button.addTarget(self, action: #selector(resposta(_:)), for: .touchUpInside)
         
         resposta3Button.backgroundColor = .systemPurple
         resposta3Button.layer.cornerRadius = 27
-//        resposta3Label.text = "1"
         resposta3Button.tag = 3
         resposta3Button.addTarget(self, action: #selector(resposta(_:)), for: .touchUpInside)
         
         resposta4Button.backgroundColor = .systemPurple
         resposta4Button.layer.cornerRadius = 27
-//        resposta4Label.text = "1"
         resposta4Button.tag = 4
         resposta4Button.addTarget(self, action: #selector(resposta(_:)), for: .touchUpInside)
         
@@ -127,7 +127,7 @@ class Game1ViewController: UIViewController {
             desafioView.centerYAnchor.constraint(equalTo: faseImage.bottomAnchor, constant: 150),
             desafioView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            desafioLabel.widthAnchor.constraint(equalToConstant: 135),
+            desafioLabel.widthAnchor.constraint(equalToConstant: 145),
             desafioLabel.heightAnchor.constraint(equalToConstant: 40),
             desafioLabel.leftAnchor.constraint(equalTo: desafioView.leftAnchor, constant: 37),
             desafioLabel.centerYAnchor.constraint(equalTo: desafioView.centerYAnchor),
@@ -176,9 +176,57 @@ class Game1ViewController: UIViewController {
         self.resposta3Button = resposta3Button
         self.resposta4Button = resposta4Button
         self.centralizadorView = centralizadorView
+        
+        updateUI()
     }
+    
+    func updateUI() {
+        faseLabel!.text = "\(tabuada.fase)"
+        desafioLabel!.text = "\(tabuada.multiplicando) x \(tabuada.multiplicador) = "
+        resposta1Button!.setTitle("\(tabuada.produto)", for: .normal)  //outlet do botao
+        resposta2Button!.setTitle("\(tabuada.resposta1)", for: .normal)
+        resposta3Button!.setTitle("\(tabuada.resposta2)", for: .normal)
+        resposta4Button!.setTitle("\(tabuada.resposta3)", for: .normal)
+    }
+    
     @objc func resposta(_ sender: UIButton){
-        print(sender.tag)
+        if(sender.currentTitle == "\(tabuada.produto)"){
+            print("Resposta certa!")
+        } else {
+            print("Resposta errada!")
+        }
+        
+        if questionNumber + 1 < listaDeTabuadas.count{
+            passarParaProximaPergunta()
+        } else {
+            terminarTeste()
+            return
+        }
+        
     }
-   
+    
+    func passarParaProximaPergunta() {
+        questionNumber += 1
+        tabuada = listaDeTabuadas[questionNumber]
+        updateUI()
+    }
+    
+    func terminarTeste() {
+        // TODO: Implementar
+    }
+    
+    //*** revisar cases por causa do desafio ***
+    func pegarListaDeTabuadas() -> [Tabuada]{
+        switch(numeroDaLista){
+            case 1: return Desafios.tabuadaDoUm;
+            case 2: return Desafios.tabuadaDoDois;
+            case 3: return Desafios.tabuadaDoTres;
+            case 4: return Desafios.tabuadaDoQuatro;
+            case 5: return Desafios.tabuadaDoCinco;
+            case 6: return Desafios.tabuadaDoSeis;
+            case 7: return Desafios.tabuadaDoSete;
+            case 8: return Desafios.tabuadaDoOito;
+            default: return Desafios.tabuadaDoNove;
+        }
+    }
 }

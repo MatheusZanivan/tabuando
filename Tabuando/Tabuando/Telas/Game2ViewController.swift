@@ -53,7 +53,9 @@ class Game2ViewController: UIViewController {
         
         
         trueButton.setImage(UIImage(named: "Certo"), for: .normal)
-        falseButton.setImage(UIImage(named: "Errado"), for: <#T##UIControl.State#>)
+        trueButton.addTarget(self, action: #selector(resposta(_:)), for: .touchUpInside)
+        falseButton.setImage(UIImage(named: "Errado"), for: .normal)
+        falseButton.addTarget(self, action: #selector(resposta(_:)), for: .touchUpInside)
         
         tituloTabuada.translatesAutoresizingMaskIntoConstraints = false
         multiplicador.translatesAutoresizingMaskIntoConstraints = false
@@ -130,15 +132,10 @@ class Game2ViewController: UIViewController {
 
 
     //bloco acionado sempre que um dos botoes de resposta for acionado
-    @IBAction func answerTrueButton(_ sender: UIButton) {
+    @objc func resposta(_ sender: UIButton) {
         submitAnswer(userAnswer: "True", sender: sender)
-    }
-    
-    
-    @IBAction func answerFalseButton(_ sender: UIButton) {
         submitAnswer(userAnswer: "False", sender: sender)
     }
-    
     
     func submitAnswer(userAnswer: String, sender: UIButton){
         let actualAnswer = listaDeTabuadas[questionNumber].answer

@@ -18,6 +18,8 @@ class Game2ViewController: UIViewController {
     
     @IBOutlet weak var trueButton: UIButton!
     @IBOutlet weak var falseButton: UIButton!
+    @IBOutlet weak var biscoitao: UIImageView!
+    
     
     // Esse numero vai vir do clique do botao da listagem
     var numeroDaLista = 1
@@ -35,7 +37,7 @@ class Game2ViewController: UIViewController {
         // inicializar objetos de tabuadas
         listaDeTabuadas = listaTabuadasTelaInicial()
         tabuada2 = listaDeTabuadas[questionNumber]
-        
+        view.sendSubviewToBack(biscoitao)
 
         updateUI()
     }

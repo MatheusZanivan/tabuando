@@ -42,20 +42,24 @@ class Game2ViewController: UIViewController {
         let faseImage = UIImageView()
         let xEBarra = UIImageView()
         
+        view.addSubview(faseImage)
         view.addSubview(tituloTabuada)
         view.addSubview(multiplicador)
         view.addSubview(multiplicando)
         view.addSubview(produto)
-        view.addSubview(trueButton)
-        view.addSubview(falseButton)
         view.addSubview(biscoitao)
         view.addSubview(xEBarra)
+        view.addSubview(trueButton)
+        view.addSubview(falseButton)
+       
         
-        
-        trueButton.setImage(UIImage(named: "Certo"), for: .normal)
+        faseImage.image = UIImage(named: "Ativo 15")
+//        trueButton.setImage(UIImage(named: "Certo"), for: .normal)
         trueButton.addTarget(self, action: #selector(resposta(_:)), for: .touchUpInside)
-        falseButton.setImage(UIImage(named: "Errado"), for: .normal)
+//        falseButton.setImage(UIImage(named: "Errado"), for: .normal)
         falseButton.addTarget(self, action: #selector(resposta(_:)), for: .touchUpInside)
+        view.sendSubviewToBack(biscoitao)
+
         
         tituloTabuada.translatesAutoresizingMaskIntoConstraints = false
         multiplicador.translatesAutoresizingMaskIntoConstraints = false
@@ -96,8 +100,8 @@ class Game2ViewController: UIViewController {
             multiplicador.widthAnchor.constraint(equalToConstant: 25),
             multiplicador.heightAnchor.constraint(equalToConstant: 35),
             
-            xEBarra.topAnchor.constraint(equalTo: biscoitao.topAnchor, constant: 190),
-            xEBarra.centerXAnchor.constraint(equalTo: biscoitao.centerXAnchor),
+//            xEBarra.topAnchor.constraint(equalTo: biscoitao.topAnchor, constant: 190),
+//            xEBarra.centerXAnchor.constraint(equalTo: biscoitao.centerXAnchor),
             
             produto.topAnchor.constraint(equalTo: xEBarra.bottomAnchor, constant: 35),
             produto.rightAnchor.constraint(equalTo: biscoitao.rightAnchor, constant: 125),
@@ -125,8 +129,6 @@ class Game2ViewController: UIViewController {
         // inicializar objetos de tabuadas
         listaDeTabuadas = listaTabuadasTelaInicial()
         tabuada2 = listaDeTabuadas[questionNumber]
-        view.sendSubviewToBack(biscoitao)
-        
         updateUI()
     }
 
@@ -172,12 +174,12 @@ class Game2ViewController: UIViewController {
     
     @objc func updateUI(){
         print("Updating UI...")
-        tituloTabuada.text = "\(tabuada2.fase)"
-        multiplicando.text = "\(tabuada2.multiplicando)"
-        multiplicador.text = "\(tabuada2.multiplicador)"
-        produto.text = "\(tabuada2.produto)"
-//        trueButton.backgroundColor = UIColor.clear
-//        falseButton.backgroundColor = UIColor.clear
+        tituloTabuada?.text = "\(tabuada2.fase)"
+        multiplicando?.text = "\(tabuada2.multiplicando)"
+        multiplicador?.text = "\(tabuada2.multiplicador)"
+        produto?.text = "\(tabuada2.produto)"
+////        trueButton.backgroundColor = UIColor.clear
+////        falseButton.backgroundColor = UIColor.clear
     }
 
     

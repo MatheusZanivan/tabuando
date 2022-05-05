@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IRs-rV-DdI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YW6-ez-iK9">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -40,19 +40,19 @@
             <point key="canvasLocation" x="1145" y="-15"/>
         </scene>
         <!--Game2 View Controller-->
-        <scene sceneID="geS-pz-ouM">
+        <scene sceneID="l6q-0I-X0r">
             <objects>
-                <viewController id="IRs-rV-DdI" customClass="Game2ViewController" customModule="Tabuando" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="YzV-Jk-fgi">
+                <viewController id="YW6-ez-iK9" customClass="Game2ViewController" customModule="Tabuando" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c7Z-wJ-zas">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="6KZ-cf-diQ"/>
+                        <viewLayoutGuide key="safeArea" id="kDK-xm-jtV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YCU-nF-0YY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="amF-wJ-Ype" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1921.7391304347827" y="-15.401785714285714"/>
+            <point key="canvasLocation" x="1912" y="-15"/>
         </scene>
         <!--Feedback View Controller-->
         <scene sceneID="Acn-Ip-mkE">

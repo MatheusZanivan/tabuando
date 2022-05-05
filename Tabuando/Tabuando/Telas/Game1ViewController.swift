@@ -179,6 +179,5 @@ class Game1ViewController: UIViewController {
     }
     @objc func resposta(_ sender: UIButton){
         print(sender.tag)
-    }
-   
+    }   
 }

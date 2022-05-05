@@ -21,6 +21,7 @@
 		F67380B0280F2A0700BF6F1D /* FaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67380AE280F2A0700BF6F1D /* FaseTableViewCell.swift */; };
 		F67380B1280F2A0700BF6F1D /* FaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F67380AF280F2A0700BF6F1D /* FaseTableViewCell.xib */; };
 		F67F7728281B6BAD006BA457 /* tituloDaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67F7727281B6BAD006BA457 /* tituloDaCell.swift */; };
+		F685567028231044001554CD /* feedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685566F28231044001554CD /* feedbackViewController.swift */; };
 		F6D6433728109F7000AAC8C8 /* FaseBotao.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D6433628109F7000AAC8C8 /* FaseBotao.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		F67380AE280F2A0700BF6F1D /* FaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaseTableViewCell.swift; sourceTree = "<group>"; };
 		F67380AF280F2A0700BF6F1D /* FaseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FaseTableViewCell.xib; sourceTree = "<group>"; };
 		F67F7727281B6BAD006BA457 /* tituloDaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tituloDaCell.swift; sourceTree = "<group>"; };
+		F685566F28231044001554CD /* feedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = feedbackViewController.swift; sourceTree = "<group>"; };
 		F6D6433628109F7000AAC8C8 /* FaseBotao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaseBotao.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +80,7 @@
 			children = (
 				F67380AB280F250E00BF6F1D /* Custom TableViewCell */,
 				F66A3FBB280DDD8400E33B23 /* LaunchScreen.storyboard */,
+				F685566F28231044001554CD /* feedbackViewController.swift */,
 				F66A3FB4280DDD8200E33B23 /* Main.swift */,
 				F66A3FB6280DDD8200E33B23 /* Main.storyboard */,
 				82DE5FF328205D9C001CFC21 /* Game2ViewController.swift */,
@@ -209,6 +212,7 @@
 				F632A75A281B097E001F6B7F /* Tabuada2.swift in Sources */,
 				F6D6433728109F7000AAC8C8 /* FaseBotao.swift in Sources */,
 				8225FE4B280FAE940081266C /* Tabuada.swift in Sources */,
+				F685567028231044001554CD /* feedbackViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

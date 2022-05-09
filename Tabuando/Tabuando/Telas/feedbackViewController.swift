@@ -55,6 +55,8 @@ class feedbackViewController: UIViewController {
         notaLabel.font = UIFont.systemFont(ofSize: 50)
         notaLabel.textColor = UIColor(red: 0.204, green: 0.78, blue: 0.349, alpha: 1)
         
+        
+        telaInicialButton.setTitle("Refazer", for: .normal)
         telaInicialButton.layer.cornerRadius = 35
         telaInicialButton.backgroundColor = .systemPurple
         telaInicialButton.tag = 1

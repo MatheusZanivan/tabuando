@@ -10,15 +10,15 @@ import UIKit
 class Game2ViewController: UIViewController {
 
     //mudar tudo na tela por essas saídas
+    private weak var faseImage : UIImageView?
     private weak var tituloTabuada: UILabel?
+    private weak var biscoitao: UIImageView?
     private weak var multiplicando: UILabel?
     private weak var multiplicador: UILabel?
     private weak var produto: UILabel?
+    private weak var xEBarra : UIImageView?
     private weak var trueButton: UIButton?
     private weak var falseButton: UIButton?
-    private weak var biscoitao: UIImageView?
-    private weak var faseImage : UIImageView?
-    private weak var xEBarra : UIImageView?
     
     
     // Esse numero vai vir do clique do botao da listagem
@@ -32,34 +32,44 @@ class Game2ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let faseImage = UIImageView()
         let tituloTabuada = UILabel()
+        let biscoitao = UIImageView()
+        let xEBarra = UIImageView()
         let multiplicando = UILabel()
         let multiplicador = UILabel()
         let produto = UILabel()
         let trueButton = UIButton()
         let falseButton = UIButton()
-        let biscoitao = UIImageView()
-        let faseImage = UIImageView()
-        let xEBarra = UIImageView()
         
-        view.addSubview(faseImage)
-        view.addSubview(tituloTabuada)
-        view.addSubview(multiplicador)
-        view.addSubview(multiplicando)
-        view.addSubview(produto)
-        view.addSubview(biscoitao)
-        view.addSubview(xEBarra)
+        self.view.addSubview(faseImage)
+        faseImage.addSubview(tituloTabuada)
+        self.view.addSubview(biscoitao)
+        biscoitao.addSubview(multiplicador)
+        biscoitao.addSubview(multiplicando)
+        biscoitao.addSubview(xEBarra)
+        biscoitao.addSubview(produto)
         view.addSubview(trueButton)
         view.addSubview(falseButton)
        
-        
         faseImage.image = UIImage(named: "Ativo 15")
-//        trueButton.setImage(UIImage(named: "Certo"), for: .normal)
-        trueButton.addTarget(self, action: #selector(resposta(_:)), for: .touchUpInside)
-//        falseButton.setImage(UIImage(named: "Errado"), for: .normal)
-        falseButton.addTarget(self, action: #selector(resposta(_:)), for: .touchUpInside)
-        view.sendSubviewToBack(biscoitao)
 
+        biscoitao.image = UIImage(named: "Ativo 1")
+        view.sendSubviewToBack(biscoitao)
+        
+        multiplicador.textColor = .white
+        
+        multiplicando.textColor = .white
+        
+//        trueButton.setImage(UIImage(named: "Certo"), for: .normal)
+//        trueButton.addTarget(self, action: #selector(resposta(_:)), for: .touchUpInside)
+//
+//        falseButton.setImage(UIImage(named: "Errado"), for: .normal)
+//        falseButton.addTarget(self, action: #selector(resposta(_:)), for: .touchUpInside)
+//
+//        produto.textColor = .white
+//
+        xEBarra.image = UIImage(named: "xEBarra")
         
         tituloTabuada.translatesAutoresizingMaskIntoConstraints = false
         multiplicador.translatesAutoresizingMaskIntoConstraints = false
@@ -69,7 +79,7 @@ class Game2ViewController: UIViewController {
         falseButton.translatesAutoresizingMaskIntoConstraints = false
         biscoitao.translatesAutoresizingMaskIntoConstraints = false
         xEBarra.translatesAutoresizingMaskIntoConstraints = false
-        
+        faseImage.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             faseImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 80),
@@ -82,39 +92,25 @@ class Game2ViewController: UIViewController {
             
 //            --------------------------------_-__-_-__-_-_-_--_-----__-_--_-_--_--_-_-__-_---_-_--_-_
             biscoitao.topAnchor.constraint(equalTo: faseImage.bottomAnchor, constant: 5),
-            biscoitao.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 710),
             biscoitao.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            biscoitao.widthAnchor.constraint(equalToConstant: 360),
+            biscoitao.heightAnchor.constraint(equalToConstant: 447),
+            biscoitao.widthAnchor.constraint(equalToConstant: 359),
             
-            xEBarra.topAnchor.constraint(equalTo: biscoitao.topAnchor, constant: 185),
-            xEBarra.bottomAnchor.constraint(equalTo: biscoitao.bottomAnchor, constant: 185),
-            xEBarra.centerXAnchor.constraint(equalTo: biscoitao.centerXAnchor),
-            
-            multiplicando.topAnchor.constraint(equalTo: biscoitao.topAnchor, constant: 110),
+            multiplicando.topAnchor.constraint(equalTo: biscoitao.topAnchor, constant: 111),
             multiplicando.rightAnchor.constraint(equalTo: biscoitao.rightAnchor, constant: 125),
-            multiplicando.widthAnchor.constraint(equalToConstant: 25),
-            multiplicando.heightAnchor.constraint(equalToConstant: 35),
             
-            multiplicador.topAnchor.constraint(equalTo: multiplicando.bottomAnchor, constant: 60),
+            multiplicador.topAnchor.constraint(equalTo: biscoitao.topAnchor, constant: 191),
             multiplicador.rightAnchor.constraint(equalTo: biscoitao.rightAnchor, constant: 125),
-            multiplicador.widthAnchor.constraint(equalToConstant: 25),
-            multiplicador.heightAnchor.constraint(equalToConstant: 35),
             
-//            xEBarra.topAnchor.constraint(equalTo: biscoitao.topAnchor, constant: 190),
-//            xEBarra.centerXAnchor.constraint(equalTo: biscoitao.centerXAnchor),
+            xEBarra.bottomAnchor.constraint(equalTo: biscoitao.topAnchor,constant: 260),
+            xEBarra.centerXAnchor.constraint(equalTo: biscoitao.centerXAnchor),
+            xEBarra.widthAnchor.constraint(equalToConstant: 220),
+            xEBarra.heightAnchor.constraint(equalToConstant: 70),
             
-            produto.topAnchor.constraint(equalTo: xEBarra.bottomAnchor, constant: 35),
+            produto.topAnchor.constraint(equalTo: biscoitao.topAnchor, constant: 292),
             produto.rightAnchor.constraint(equalTo: biscoitao.rightAnchor, constant: 125),
-            produto.widthAnchor.constraint(equalToConstant: 25),
-            produto.heightAnchor.constraint(equalToConstant: 35),
-            
-            trueButton.leftAnchor.constraint(equalTo: view.leftAnchor,constant: 55),
-            trueButton.topAnchor.constraint(equalTo: biscoitao.bottomAnchor, constant: 55),
             
             
-            falseButton.leftAnchor.constraint(equalTo: trueButton.rightAnchor, constant: 45),
-            falseButton.centerYAnchor.constraint(equalTo: trueButton.centerYAnchor)
-        
         ])
 
         self.faseImage = faseImage

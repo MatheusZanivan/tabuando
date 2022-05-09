@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    // Variáveis da tela
+//     Variáveis da tela
     private weak var backgroundImage: UIImageView?
 //    private weak var titleImage: UIImageView?
     private weak var tableView: UITableView?
@@ -120,7 +120,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     @objc func teste(_ sender: FaseBotao) {
-        print("O botão no index \(sender.tag) foi apertado")
+//        print("O botão no index \(sender.tag) foi apertado")
+        
+        switch sender.tag {
+        case 0:
+            guard let gameViewController = storyboard?.instantiateViewController(withIdentifier: "Game1ViewController") as? Game1ViewController else { return }
+            navigationController?.pushViewController(gameViewController, animated: true)
+            break
+        default:
+            print("nem tem opção")
+        }
+        
+        // mudar a cor do botão
         sender.alpha = 0.5
         DispatchQueue.main.asyncAfter(deadline: .now()+0.2) {
             sender.alpha = 1.0
@@ -135,10 +146,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
     
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        var rodrigo = "OSAKFKVSDJG"
-//        return rodrigo
-//    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100

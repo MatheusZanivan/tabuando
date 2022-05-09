@@ -9,7 +9,9 @@ import UIKit
 
 class feedbackViewController: UIViewController {
     
-    var score : Int? 
+    var score : Int?
+    
+    var voltarTelaInicial: (() -> Void)?
     
     private weak var fraseDeFeedbackView : UIView?
     private weak var fraseDeFeedbackLabel : UILabel?
@@ -17,10 +19,10 @@ class feedbackViewController: UIViewController {
     private weak var voceTirouLabel : UILabel?
     private weak var notaLabel : UILabel?
     private weak var telaInicialButton : UIButton?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
            let fraseDeFeedbackView = UIView()
            let fraseDeFeedbackLabel = UILabel()
            let logoFeedbackImage = UIImageView()
@@ -46,12 +48,12 @@ class feedbackViewController: UIViewController {
         if (score! < 8){
             if (score! < 6){
                 feedbackLabel = "Que pena!"
-                feedbackImage = "Ativo 4"
-                scoreColor = UIColor(red: 1, green: 0.8, blue: 0, alpha: 1)
-            } else {
-                feedbackLabel = "Foi perto!"
                 feedbackImage = "Ativo 5"
                 scoreColor = UIColor(red: 1, green: 0.22, blue: 0.188, alpha: 1)
+            } else {
+                feedbackLabel = "Foi perto!"
+                feedbackImage = "Ativo 4"
+                scoreColor = UIColor(red: 1, green: 0.8, blue: 0, alpha: 1)
             }
         }
         
@@ -76,7 +78,7 @@ class feedbackViewController: UIViewController {
         telaInicialButton.backgroundColor = .systemPurple
         telaInicialButton.tag = 1
         telaInicialButton.addTarget(self, action: #selector(telaInicial(_:)), for: .touchUpInside)
-        
+        telaInicialButton.setTitle("Inicio", for: .normal)
         
         fraseDeFeedbackView.translatesAutoresizingMaskIntoConstraints = false
         fraseDeFeedbackLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -119,19 +121,13 @@ class feedbackViewController: UIViewController {
             telaInicialButton.widthAnchor.constraint(equalToConstant: 269),
             telaInicialButton.heightAnchor.constraint(equalToConstant: 70)
             
-        
-        
         ])
         
         
     }
+    
     @objc func telaInicial(_ sender: UIButton){
-//        while sender.tag < 10{
-//            sender.tag += 1
-//            print(sender.tag)
-//        }
-        let nextViewController = ViewController()
-        self.navigationController?.pushViewController(nextViewController, animated: true)
-        
+        dismiss(animated: true)
+        voltarTelaInicial?()
     }
 }

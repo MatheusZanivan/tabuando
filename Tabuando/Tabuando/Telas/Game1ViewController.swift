@@ -28,6 +28,7 @@ class Game1ViewController: UIViewController {
     var tabuada: Tabuada!
     var questionNumber = 0
     var score = 0
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -195,6 +196,10 @@ class Game1ViewController: UIViewController {
     }
     
     @objc func resposta(_ sender: UIButton){
+        
+        print("question number: \(self.questionNumber) / \(self.listaDeTabuadas.count)")
+        
+        
         if(sender.currentTitle == "\(tabuada.produto)"){
             score += 1
 //            sender.backgroundColor = UIColor.green
@@ -208,7 +213,6 @@ class Game1ViewController: UIViewController {
             passarParaProximaPergunta()
         } else {
             terminarTeste()
-//            return
         }
         
 //        Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
@@ -220,14 +224,18 @@ class Game1ViewController: UIViewController {
         updateUI()
     }
     
+    
     func terminarTeste() {
-        print("antes")
-        print(self.navigationController)  //NAVIGATIONCONTROLLER TA NIL. COMO LINKAR O NAVIGATION NO VIEW CONTROLLER?
-        let nextViewController = feedbackViewController()
-        nextViewController.score = self.score
-        self.navigationController?.pushViewController(nextViewController, animated: true)
-        print("depois")
+        guard let feedbackScreen = storyboard?.instantiateViewController(withIdentifier: "feedbackcontroller") as? feedbackViewController else { return }
+        feedbackScreen.score = self.score
+        feedbackScreen.modalPresentationStyle = .fullScreen
+        feedbackScreen.voltarTelaInicial = {
+            self.navigationController?.popToRootViewController(animated: false)
+        }
+        
+        present(feedbackScreen, animated: true)
     }
+    
     
     //*** revisar cases por causa do desafio ***
     func pegarListaDeTabuadas() -> [Tabuada]{

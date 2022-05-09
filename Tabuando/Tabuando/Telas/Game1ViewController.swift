@@ -27,6 +27,7 @@ class Game1ViewController: UIViewController {
     var listaDeTabuadas: [Tabuada] = []
     var tabuada: Tabuada!
     var questionNumber = 0
+    var score = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -127,7 +128,7 @@ class Game1ViewController: UIViewController {
             desafioView.centerYAnchor.constraint(equalTo: faseImage.bottomAnchor, constant: 150),
             desafioView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            desafioLabel.widthAnchor.constraint(equalToConstant: 145),
+            desafioLabel.widthAnchor.constraint(equalToConstant: 145),  //ACERTAR NO 1 X 10
             desafioLabel.heightAnchor.constraint(equalToConstant: 40),
             desafioLabel.leftAnchor.constraint(equalTo: desafioView.leftAnchor, constant: 37),
             desafioLabel.centerYAnchor.constraint(equalTo: desafioView.centerYAnchor),
@@ -180,29 +181,37 @@ class Game1ViewController: UIViewController {
         updateUI()
     }
     
-    func updateUI() {
+    @objc func updateUI() {
         faseLabel!.text = "\(tabuada.fase)"
         desafioLabel!.text = "\(tabuada.multiplicando) x \(tabuada.multiplicador) = "
         resposta1Button!.setTitle("\(tabuada.produto)", for: .normal)  //outlet do botao
         resposta2Button!.setTitle("\(tabuada.resposta1)", for: .normal)
         resposta3Button!.setTitle("\(tabuada.resposta2)", for: .normal)
         resposta4Button!.setTitle("\(tabuada.resposta3)", for: .normal)
+//        resposta1Button!.backgroundColor = UIColor.systemPurple
+//        resposta2Button!.backgroundColor = UIColor.systemPurple
+//        resposta3Button!.backgroundColor = UIColor.systemPurple
+//        resposta4Button!.backgroundColor = UIColor.systemPurple
     }
     
     @objc func resposta(_ sender: UIButton){
         if(sender.currentTitle == "\(tabuada.produto)"){
-            print("Resposta certa!")
+            score += 1
+//            sender.backgroundColor = UIColor.green
+//            print("Resposta certa!")
         } else {
-            print("Resposta errada!")
+//            sender.backgroundColor = UIColor.red
+//            print("Resposta errada!")
         }
         
         if questionNumber + 1 < listaDeTabuadas.count{
             passarParaProximaPergunta()
         } else {
             terminarTeste()
-            return
+//            return
         }
         
+//        Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
     }
     
     func passarParaProximaPergunta() {
@@ -212,7 +221,12 @@ class Game1ViewController: UIViewController {
     }
     
     func terminarTeste() {
-        // TODO: Implementar
+        print("antes")
+        print(self.navigationController)  //NAVIGATIONCONTROLLER TA NIL. COMO LINKAR O NAVIGATION NO VIEW CONTROLLER?
+        let nextViewController = feedbackViewController()
+        nextViewController.score = self.score
+        self.navigationController?.pushViewController(nextViewController, animated: true)
+        print("depois")
     }
     
     //*** revisar cases por causa do desafio ***

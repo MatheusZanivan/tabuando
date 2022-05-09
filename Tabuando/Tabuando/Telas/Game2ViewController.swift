@@ -27,6 +27,7 @@ class Game2ViewController: UIViewController {
     var listaDeTabuadas: [Tabuada2] = []
     var tabuada2: Tabuada2!
     var questionNumber = 0
+    var score = 0
     
     //bloco a ser carregado assim que a tela for inicializada
     override func viewDidLoad() {
@@ -55,12 +56,12 @@ class Game2ViewController: UIViewController {
         
         faseImage.image = UIImage(named: "Ativo 15")
 //        trueButton.setImage(UIImage(named: "Certo"), for: .normal)
-        trueButton.addTarget(self, action: #selector(resposta(_:)), for: .touchUpInside)
+        trueButton.addTarget(self, action: #selector(trueClicado(_:)), for: .touchUpInside)
 //        falseButton.setImage(UIImage(named: "Errado"), for: .normal)
-        falseButton.addTarget(self, action: #selector(resposta(_:)), for: .touchUpInside)
+        falseButton.addTarget(self, action: #selector(falseClicado(_:)), for: .touchUpInside)
         view.sendSubviewToBack(biscoitao)
 
-        
+        faseImage.translatesAutoresizingMaskIntoConstraints = false
         tituloTabuada.translatesAutoresizingMaskIntoConstraints = false
         multiplicador.translatesAutoresizingMaskIntoConstraints = false
         multiplicando.translatesAutoresizingMaskIntoConstraints = false
@@ -100,17 +101,14 @@ class Game2ViewController: UIViewController {
             multiplicador.widthAnchor.constraint(equalToConstant: 25),
             multiplicador.heightAnchor.constraint(equalToConstant: 35),
             
-//            xEBarra.topAnchor.constraint(equalTo: biscoitao.topAnchor, constant: 190),
-//            xEBarra.centerXAnchor.constraint(equalTo: biscoitao.centerXAnchor),
-            
             produto.topAnchor.constraint(equalTo: xEBarra.bottomAnchor, constant: 35),
             produto.rightAnchor.constraint(equalTo: biscoitao.rightAnchor, constant: 125),
             produto.widthAnchor.constraint(equalToConstant: 25),
             produto.heightAnchor.constraint(equalToConstant: 35),
             
+            
             trueButton.leftAnchor.constraint(equalTo: view.leftAnchor,constant: 55),
             trueButton.topAnchor.constraint(equalTo: biscoitao.bottomAnchor, constant: 55),
-            
             
             falseButton.leftAnchor.constraint(equalTo: trueButton.rightAnchor, constant: 45),
             falseButton.centerYAnchor.constraint(equalTo: trueButton.centerYAnchor)
@@ -134,22 +132,27 @@ class Game2ViewController: UIViewController {
 
 
     //bloco acionado sempre que um dos botoes de resposta for acionado
-    @objc func resposta(_ sender: UIButton) {
+    //fç chamando outra fç
+    @objc func trueClicado(_ sender: UIButton) {
         submitAnswer(userAnswer: "True", sender: sender)
+    }
+    
+    @objc func falseClicado(_ sender: UIButton) {
         submitAnswer(userAnswer: "False", sender: sender)
     }
     
     func submitAnswer(userAnswer: String, sender: UIButton){
         let actualAnswer = listaDeTabuadas[questionNumber].answer
         
-        //print(userAnswer)
-        print(actualAnswer)
+//        print(userAnswer)
+//        print(actualAnswer)
         
         if (userAnswer == actualAnswer) {
-            print("Correct!")
+            score += 1
+//            print("Correct!")
             sender.backgroundColor = UIColor.green
         } else {
-            print("Wrong!")
+//            print("Wrong!")
             sender.backgroundColor = UIColor.red
         }
         
@@ -166,20 +169,23 @@ class Game2ViewController: UIViewController {
     }
     
     
-    
+    //chamando a tela de score
     func terminarTeste() {
-        // TODO: chamar a tela de score
+        let nextViewController = feedbackViewController()
+        nextViewController.score = self.score
+        self.navigationController?.pushViewController(nextViewController, animated: true)
     }
     
     
     @objc func updateUI(){
         print("Updating UI...")
+//        self.view.backgroundColor = UIColor.red
         tituloTabuada?.text = "\(tabuada2.fase)"
         multiplicando?.text = "\(tabuada2.multiplicando)"
         multiplicador?.text = "\(tabuada2.multiplicador)"
         produto?.text = "\(tabuada2.produto)"
-////        trueButton.backgroundColor = UIColor.clear
-////        falseButton.backgroundColor = UIColor.clear
+        trueButton?.backgroundColor = UIColor.clear
+        falseButton?.backgroundColor = UIColor.clear
     }
 
     

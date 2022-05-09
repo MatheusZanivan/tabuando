@@ -9,6 +9,8 @@ import UIKit
 
 class feedbackViewController: UIViewController {
     
+    var score : Int? 
+    
     private weak var fraseDeFeedbackView : UIView?
     private weak var fraseDeFeedbackLabel : UILabel?
     private weak var logoFeedbackImage : UIImageView?
@@ -38,22 +40,37 @@ class feedbackViewController: UIViewController {
         fraseDeFeedbackView.backgroundColor = .systemPurple
         fraseDeFeedbackView.layer.cornerRadius = 35
         
-        fraseDeFeedbackLabel.text = "Parabéns!"
+        var feedbackLabel = "Parabéns!"
+        var feedbackImage = "Ativo 3"
+        var scoreColor = UIColor(red: 0.204, green: 0.78, blue: 0.349, alpha: 1)
+        if (score! < 8){
+            if (score! < 6){
+                feedbackLabel = "Que pena!"
+                feedbackImage = "Ativo 4"
+                scoreColor = UIColor(red: 1, green: 0.8, blue: 0, alpha: 1)
+            } else {
+                feedbackLabel = "Foi perto!"
+                feedbackImage = "Ativo 5"
+                scoreColor = UIColor(red: 1, green: 0.22, blue: 0.188, alpha: 1)
+            }
+        }
+        
+        fraseDeFeedbackLabel.text = feedbackLabel
         fraseDeFeedbackLabel.font = UIFont.systemFont(ofSize: 50)
         fraseDeFeedbackLabel.textColor = .white
         fraseDeFeedbackLabel.textAlignment = .center
         
-        logoFeedbackImage.image = UIImage(named: "Ativo 3")
+        logoFeedbackImage.image = UIImage(named: feedbackImage)
         
         voceTirouLabel.text = "Você tirou"
         voceTirouLabel.font = UIFont.systemFont(ofSize: 50)
         voceTirouLabel.textAlignment = .center
         voceTirouLabel.textColor = UIColor(red: 0.557, green: 0.557, blue: 0.576, alpha: 1)
         
-        notaLabel.text = "10/10"
+        notaLabel.text = "\(score!)/10"
         notaLabel.textAlignment = .center
         notaLabel.font = UIFont.systemFont(ofSize: 50)
-        notaLabel.textColor = UIColor(red: 0.204, green: 0.78, blue: 0.349, alpha: 1)
+        notaLabel.textColor = scoreColor
         
         telaInicialButton.layer.cornerRadius = 35
         telaInicialButton.backgroundColor = .systemPurple
@@ -109,10 +126,12 @@ class feedbackViewController: UIViewController {
         
     }
     @objc func telaInicial(_ sender: UIButton){
-        while sender.tag < 10{
-            sender.tag += 1
-            print(sender.tag)
-        }
+//        while sender.tag < 10{
+//            sender.tag += 1
+//            print(sender.tag)
+//        }
+        let nextViewController = ViewController()
+        self.navigationController?.pushViewController(nextViewController, animated: true)
         
     }
 }

@@ -70,6 +70,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //        titleImage.image = UIImage(named: "Tabuando.png")
         
         tableView.register(customCell.nib(), forCellReuseIdentifier: customCell.identifier)
+        tableView.canCancelContentTouches = true
         tableView.separatorStyle = .none
         tableView.backgroundColor = .clear
         tableView.dataSource = self
@@ -120,8 +121,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     @objc func teste(_ sender: FaseBotao) {
-//        print("O botão no index \(sender.tag) foi apertado")
-        
         switch sender.tag {
         case 0:
             openGame1(numeroDaTabuada: 1)
@@ -133,7 +132,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             openGame1(numeroDaTabuada: 3)
             break
         case 3:
-            print("desafio1")
+            openGame2(numeroDaTabuada: -1)
             break
         case 4:
             openGame2(numeroDaTabuada: 4)
@@ -145,7 +144,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             openGame2(numeroDaTabuada: 6)
             break
         case 7:
-            print("desafio2")
+            openGame1(numeroDaTabuada: -2)
             break
         case 8:
             openGame1(numeroDaTabuada: 7)
@@ -157,7 +156,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             openGame1(numeroDaTabuada: 9)
             break
         default:
-            print("desafio3")
+            openGame2(numeroDaTabuada: -3)
         }
         
         // mudar a cor do botão
@@ -180,12 +179,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        
-        
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        tableView.deselectRow(at: indexPath, animated: false)
+//
+//        tableView.cellForRow(at: indexPath)?.backgroundColor = .clear
+//
+//    }
+
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        tableView.cellForRow(at: indexPath)?.selectionStyle = .none
+        return nil
     }
-    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100

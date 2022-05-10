@@ -104,7 +104,6 @@ class Game1ViewController: UIViewController {
         resposta4Button.tag = 4
         resposta4Button.addTarget(self, action: #selector(resposta(_:)), for: .touchUpInside)
         
-        
         faseImage.translatesAutoresizingMaskIntoConstraints = false
         faseLabel.translatesAutoresizingMaskIntoConstraints = false
         desafioView.translatesAutoresizingMaskIntoConstraints = false
@@ -197,33 +196,30 @@ class Game1ViewController: UIViewController {
         resposta2Button!.setTitle("\(tabuada.resposta2)", for: .normal)
         resposta3Button!.setTitle("\(tabuada.resposta3)", for: .normal)
         resposta4Button!.setTitle("\(tabuada.resposta4)", for: .normal)
-//        resposta1Button!.backgroundColor = UIColor.systemPurple
-//        resposta2Button!.backgroundColor = UIColor.systemPurple
-//        resposta3Button!.backgroundColor = UIColor.systemPurple
-//        resposta4Button!.backgroundColor = UIColor.systemPurple
     }
-    
+
     @objc func resposta(_ sender: UIButton){
         
-        print("question number: \(self.questionNumber) / \(self.listaDeTabuadas.count)")
-        
+//        print("question number: \(self.questionNumber) / \(self.listaDeTabuadas.count)")
         
         if(sender.currentTitle == "\(tabuada.produto)"){
             score += 1
-//            sender.backgroundColor = UIColor.green
-//            print("Resposta certa!")
+            sender.backgroundColor = UIColor.systemGreen
         } else {
-//            sender.backgroundColor = UIColor.red
-//            print("Resposta errada!")
+            sender.backgroundColor = UIColor.systemRed
         }
         
-        if questionNumber + 1 < listaDeTabuadas.count{
-            passarParaProximaPergunta()
-        } else {
-            terminarTeste()
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { [self]_ in
+            sender.backgroundColor = .systemPurple
+            
+            if questionNumber + 1 < listaDeTabuadas.count{
+                passarParaProximaPergunta()
+            } else {
+                terminarTeste()
+            }
         }
         
-//        Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+        
     }
     
     func passarParaProximaPergunta() {

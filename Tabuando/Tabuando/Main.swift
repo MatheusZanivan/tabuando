@@ -76,7 +76,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.delegate = self
         
         tableView.tableHeaderView = tituloDaCell(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 100))
+        
         self.navigationController?.navigationBar.isHidden = true
+        
+        
         NSLayoutConstraint.activate([
             backgroundImage.topAnchor.constraint(equalTo: view.topAnchor),
             backgroundImage.leftAnchor.constraint(equalTo: view.leftAnchor),

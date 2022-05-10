@@ -59,16 +59,23 @@ class Game2ViewController: UIViewController {
         view.sendSubviewToBack(biscoitao)
         
         multiplicador.textColor = .white
+        multiplicador.font = UIFont.systemFont(ofSize: 60)
         
         multiplicando.textColor = .white
+        multiplicando.font = UIFont.systemFont(ofSize: 60)
         
         xEBarra.image = UIImage(named: "xEBarra")
         
-//        trueButton.setImage(UIImage(named: "Certo"), for: .normal)
+        produto.textColor = .white
+        produto.font = UIFont.systemFont(ofSize: 60)
+        
+        trueButton.setImage(UIImage(named: "Certo"), for: .normal)
         trueButton.addTarget(self, action: #selector(trueClicado(_:)), for: .touchUpInside)
-//        falseButton.setImage(UIImage(named: "Errado"), for: .normal)
+        
+        falseButton.setImage(UIImage(named: "Errado"), for: .normal)
         falseButton.addTarget(self, action: #selector(falseClicado(_:)), for: .touchUpInside)
-        view.sendSubviewToBack(biscoitao)
+        
+        
 
         faseImage.translatesAutoresizingMaskIntoConstraints = false
         tituloTabuada.translatesAutoresizingMaskIntoConstraints = false
@@ -104,11 +111,40 @@ class Game2ViewController: UIViewController {
             
             xEBarra.bottomAnchor.constraint(equalTo: biscoitao.topAnchor,constant: 260),
             xEBarra.centerXAnchor.constraint(equalTo: biscoitao.centerXAnchor),
-            xEBarra.widthAnchor.constraint(equalToConstant: 220),
+            xEBarra.widthAnchor.constraint(equalToConstant: 230),
             xEBarra.heightAnchor.constraint(equalToConstant: 70),
             
-            produto.topAnchor.constraint(equalTo: biscoitao.topAnchor, constant: 292),
-            produto.rightAnchor.constraint(equalTo: biscoitao.rightAnchor, constant: 125),
+            
+            multiplicando.topAnchor.constraint(equalTo: biscoitao.topAnchor,constant: 70),
+            multiplicando.rightAnchor.constraint(equalTo: biscoitao.leftAnchor, constant: 250),
+            
+            multiplicador.topAnchor.constraint(equalTo: biscoitao.topAnchor,constant: 170),
+            multiplicador.rightAnchor.constraint(equalTo: biscoitao.leftAnchor, constant: 250),
+            
+            
+            produto.topAnchor.constraint(equalTo: xEBarra.bottomAnchor, constant: 10),
+            produto.rightAnchor.constraint(equalTo: biscoitao.leftAnchor, constant: 250),
+//            produto.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+//            produto.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            
+            
+            
+            trueButton.widthAnchor.constraint(equalToConstant: 110),
+            trueButton.heightAnchor.constraint(equalToConstant: 110),
+            trueButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 50),
+            trueButton.topAnchor.constraint(equalTo: biscoitao.bottomAnchor, constant: 20),
+            
+            falseButton.widthAnchor.constraint(equalToConstant: 110),
+            falseButton.heightAnchor.constraint(equalToConstant: 110),
+            falseButton.leftAnchor.constraint(equalTo: trueButton.rightAnchor, constant: 70),
+            falseButton.centerYAnchor.constraint(equalTo: trueButton.centerYAnchor),
+            
+            
+            
+            
+            
+            
+            
             
             
         ])
@@ -186,9 +222,10 @@ class Game2ViewController: UIViewController {
         tituloTabuada?.text = "\(tabuada2.fase)"
         multiplicando?.text = "\(tabuada2.multiplicando)"
         multiplicador?.text = "\(tabuada2.multiplicador)"
-        produto?.text = "\(tabuada2.produto)"
-        trueButton?.backgroundColor = UIColor.clear
-        falseButton?.backgroundColor = UIColor.clear
+        produto!.text = "\(tabuada2.produto)"
+        
+//        trueButton?.backgroundColor = UIColor.clear
+//        falseButton?.backgroundColor = UIColor.clear
     }
 
     

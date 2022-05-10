@@ -119,7 +119,7 @@ class Desafios {
         Tabuada(multiplicando: 9, multiplicador: 1, produto: 9, resposta1: 3,resposta2: 19,resposta3: 9,resposta4: 90,fase:"9x?"),
         Tabuada(multiplicando: 9, multiplicador: 2, produto: 18,resposta1: 11,resposta2: 15,resposta3: 32,resposta4: 18,fase:"9x?"),
         Tabuada(multiplicando: 9, multiplicador: 3, produto: 27,resposta1: 23,resposta2: 26,resposta3: 27,resposta4: 39,fase:"9x?"),
-        Tabuada(multiplicando: 9, multiplicador: 4, produto: 32,resposta1: 32,resposta2: 13,resposta3: 49,resposta4: 23,fase:"9x?"),
+        Tabuada(multiplicando: 9, multiplicador: 4, produto: 36,resposta1: 32,resposta2: 36,resposta3: 49,resposta4: 23,fase:"9x?"),
         Tabuada(multiplicando: 9, multiplicador: 5, produto: 45,resposta1: 54,resposta2: 45,resposta3: 67,resposta4: 19,fase:"9x?"),
         Tabuada(multiplicando: 9, multiplicador: 6, produto: 54,resposta1: 54,resposta2: 69,resposta3: 39,resposta4: 50,fase:"9x?"),
         Tabuada(multiplicando: 9, multiplicador: 7, produto: 63,resposta1: 36,resposta2: 63,resposta3: 16,resposta4: 54,fase:"9x?"),

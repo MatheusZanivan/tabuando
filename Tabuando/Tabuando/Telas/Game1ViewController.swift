@@ -77,6 +77,10 @@ class Game1ViewController: UIViewController {
         desafioLabel.font = UIFont.systemFont(ofSize: 50)
         desafioLabel.textColor = .white
         
+        igualLabel.text = "="
+        igualLabel.textColor = .white
+        igualLabel.font = UIFont.systemFont(ofSize: 50)
+        
         resultadoView.backgroundColor = .systemPurple
         resultadoView.layer.cornerRadius = 27
         
@@ -106,6 +110,7 @@ class Game1ViewController: UIViewController {
         desafioView.translatesAutoresizingMaskIntoConstraints = false
         desafioLabel.translatesAutoresizingMaskIntoConstraints = false
         igualLabel.translatesAutoresizingMaskIntoConstraints = false
+        igualLabel.translatesAutoresizingMaskIntoConstraints = false
         resultadoView.translatesAutoresizingMaskIntoConstraints = false
         resposta1Button.translatesAutoresizingMaskIntoConstraints = false
         resposta2Button.translatesAutoresizingMaskIntoConstraints = false
@@ -129,16 +134,19 @@ class Game1ViewController: UIViewController {
             desafioView.centerYAnchor.constraint(equalTo: faseImage.bottomAnchor, constant: 150),
             desafioView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            desafioLabel.widthAnchor.constraint(equalToConstant: 145),  //ACERTAR NO 1 X 10
+            desafioLabel.widthAnchor.constraint(equalToConstant: 140),  //ACERTAR NO 1 X 10
             desafioLabel.heightAnchor.constraint(equalToConstant: 40),
-            desafioLabel.leftAnchor.constraint(equalTo: desafioView.leftAnchor, constant: 37),
+            desafioLabel.leftAnchor.constraint(equalTo: desafioView.leftAnchor, constant: 0),
             desafioLabel.centerYAnchor.constraint(equalTo: desafioView.centerYAnchor),
+            
+            igualLabel.centerYAnchor.constraint(equalTo: desafioLabel.centerYAnchor),
+            igualLabel.leftAnchor.constraint(equalTo: desafioLabel.rightAnchor),
             
             resultadoView.widthAnchor.constraint(equalToConstant: 72),
             resultadoView.heightAnchor.constraint(equalToConstant: 72),
 //            resultadoView.topAnchor.constraint(equalTo: desafioView.topAnchor, constant: 9),
             resultadoView.centerYAnchor.constraint(equalTo: desafioView.centerYAnchor),
-            resultadoView.leftAnchor.constraint(equalTo: view.leftAnchor,constant: 247),
+            resultadoView.leftAnchor.constraint(equalTo: view.leftAnchor,constant: 255),
             
             //--------------------------------------------------------------------------------
             centralizadorView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -184,7 +192,7 @@ class Game1ViewController: UIViewController {
     
     @objc func updateUI() {
         faseLabel!.text = "\(tabuada.fase)"
-        desafioLabel!.text = "\(tabuada.multiplicando) x \(tabuada.multiplicador) = "
+        desafioLabel!.text = "\(tabuada.multiplicando) x \(tabuada.multiplicador) "
         resposta1Button!.setTitle("\(tabuada.produto)", for: .normal)  //outlet do botao
         resposta2Button!.setTitle("\(tabuada.resposta1)", for: .normal)
         resposta3Button!.setTitle("\(tabuada.resposta2)", for: .normal)

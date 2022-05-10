@@ -48,7 +48,7 @@ class Game2ViewController: UIViewController {
         self.view.addSubview(biscoitao)
         biscoitao.addSubview(multiplicador)
         biscoitao.addSubview(multiplicando)
-        biscoitao.addSubview(xEBarra)
+        self.view.addSubview(xEBarra)
         biscoitao.addSubview(produto)
         view.addSubview(trueButton)
         view.addSubview(falseButton)
@@ -61,6 +61,8 @@ class Game2ViewController: UIViewController {
         multiplicador.textColor = .white
         
         multiplicando.textColor = .white
+        
+        xEBarra.image = UIImage(named: "xEBarra")
         
 //        trueButton.setImage(UIImage(named: "Certo"), for: .normal)
         trueButton.addTarget(self, action: #selector(trueClicado(_:)), for: .touchUpInside)

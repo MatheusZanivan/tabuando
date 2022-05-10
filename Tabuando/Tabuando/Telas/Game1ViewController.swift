@@ -256,6 +256,7 @@ class Game1ViewController: UIViewController {
 //            case 6: return Desafios.tabuadaDoSeis;
             case 7: return Desafios.tabuadaDoSete;
 //            case 8: return Desafios.tabuadaDoOito;
+            case -2: return Desafios.tabuadaDoDesafio2;
             default: return Desafios.tabuadaDoNove;
         }
     }

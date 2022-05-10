@@ -64,4 +64,8 @@ class Game2 {
         Tabuada2(multiplicando: 8 , multiplicador: 9, produto: 72, answer: "True", fase: "8x?"),
         Tabuada2(multiplicando: 8 , multiplicador: 10, produto: 20, answer: "True", fase: "8x?")
     ]
+    
+    static let quizDesafio1 : [Tabuada2] = []
+    
+    static let quizDesafio3 : [Tabuada2] = []
 }

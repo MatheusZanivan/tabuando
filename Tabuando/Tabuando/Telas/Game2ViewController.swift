@@ -202,6 +202,8 @@ class Game2ViewController: UIViewController {
             case 4: return Game2.quizQuatro;
             case 6: return Game2.quizSeis;
             case 8: return Game2.quizOito;
+            case -1: return Game2.quizDesafio1;
+            case -3: return Game2.quizDesafio3;
             default: return Game2.quizOito;
         }
     }

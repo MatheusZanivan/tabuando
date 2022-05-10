@@ -127,4 +127,6 @@ class Desafios {
         Tabuada(multiplicando: 9, multiplicador: 9, produto: 81,resposta1: 81,resposta2: 18,resposta3: 83,resposta4: 72,fase:"9x?"),
         Tabuada(multiplicando: 9, multiplicador: 10, produto: 90,resposta1: 19,resposta2: 87,resposta3: 91,resposta4: 90,fase:"9x?")
     ]
+    
+    static let tabuadaDoDesafio2 : [Tabuada] = []
 }

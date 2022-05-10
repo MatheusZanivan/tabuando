@@ -22,7 +22,7 @@ class Game2ViewController: UIViewController {
     
     
     // Esse numero vai vir do clique do botao da listagem
-    var numeroDaLista = 1
+    var numeroDaLista : Int?
     // Lidar com a tabuada corrente
     var listaDeTabuadas: [Tabuada2] = []
     var tabuada2: Tabuada2!
@@ -45,11 +45,13 @@ class Game2ViewController: UIViewController {
         
         view.addSubview(faseImage)
         view.addSubview(tituloTabuada)
-        view.addSubview(multiplicador)
-        view.addSubview(multiplicando)
-        view.addSubview(produto)
+        
         view.addSubview(biscoitao)
         view.addSubview(xEBarra)
+        view.addSubview(multiplicando)
+        view.addSubview(multiplicador)
+        view.addSubview(produto)
+        
         view.addSubview(trueButton)
         view.addSubview(falseButton)
        
@@ -71,7 +73,6 @@ class Game2ViewController: UIViewController {
         biscoitao.translatesAutoresizingMaskIntoConstraints = false
         xEBarra.translatesAutoresizingMaskIntoConstraints = false
         
-        
         NSLayoutConstraint.activate([
             faseImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 80),
             faseImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -83,9 +84,9 @@ class Game2ViewController: UIViewController {
             
 //            --------------------------------_-__-_-__-_-_-_--_-----__-_--_-_--_--_-_-__-_---_-_--_-_
             biscoitao.topAnchor.constraint(equalTo: faseImage.bottomAnchor, constant: 5),
-            biscoitao.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 710),
             biscoitao.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            biscoitao.widthAnchor.constraint(equalToConstant: 360),
+            biscoitao.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8),
+            biscoitao.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5),
             
             xEBarra.topAnchor.constraint(equalTo: biscoitao.topAnchor, constant: 185),
             xEBarra.bottomAnchor.constraint(equalTo: biscoitao.bottomAnchor, constant: 185),
@@ -171,9 +172,14 @@ class Game2ViewController: UIViewController {
     
     //chamando a tela de score
     func terminarTeste() {
-        let nextViewController = feedbackViewController()
-        nextViewController.score = self.score
-        self.navigationController?.pushViewController(nextViewController, animated: true)
+        guard let feedbackScreen = storyboard?.instantiateViewController(withIdentifier: "feedbackcontroller") as? feedbackViewController else { return }
+        feedbackScreen.score = self.score
+        feedbackScreen.modalPresentationStyle = .fullScreen
+        feedbackScreen.voltarTelaInicial = {
+            self.navigationController?.popToRootViewController(animated: false)
+        }
+        
+        present(feedbackScreen, animated: true)
     }
     
     
@@ -192,11 +198,11 @@ class Game2ViewController: UIViewController {
     //*** revisar cases por causa do desafio ***
     func listaTabuadasTelaInicial() -> [Tabuada2]{
         switch(numeroDaLista){
-            case 1: return Game2.quizDois;
             case 2: return Game2.quizDois;
-            case 3: return Game2.quizDois;
-            case 4: return Game2.quizDois;
-            default: return Game2.quizDois;
+            case 4: return Game2.quizQuatro;
+            case 6: return Game2.quizSeis;
+            case 8: return Game2.quizOito;
+            default: return Game2.quizOito;
         }
     }
     

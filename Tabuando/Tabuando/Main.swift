@@ -124,11 +124,40 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         switch sender.tag {
         case 0:
-            guard let gameViewController = storyboard?.instantiateViewController(withIdentifier: "Game1ViewController") as? Game1ViewController else { return }
-            navigationController?.pushViewController(gameViewController, animated: true)
+            openGame1(numeroDaTabuada: 1)
+            break
+        case 1:
+            openGame2(numeroDaTabuada: 2)
+            break
+        case 2:
+            openGame1(numeroDaTabuada: 3)
+            break
+        case 3:
+            print("desafio1")
+            break
+        case 4:
+            openGame2(numeroDaTabuada: 4)
+            break
+        case 5:
+            openGame1(numeroDaTabuada: 5)
+            break
+        case 6:
+            openGame2(numeroDaTabuada: 6)
+            break
+        case 7:
+            print("desafio2")
+            break
+        case 8:
+            openGame1(numeroDaTabuada: 7)
+            break
+        case 9:
+            openGame2(numeroDaTabuada: 8)
+            break
+        case 10:
+            openGame1(numeroDaTabuada: 9)
             break
         default:
-            print("nem tem opção")
+            print("desafio3")
         }
         
         // mudar a cor do botão
@@ -138,6 +167,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     
+    func openGame1(numeroDaTabuada: Int) {
+        guard let gameViewController = storyboard?.instantiateViewController(withIdentifier: "Game1ViewController") as? Game1ViewController else { return }
+        gameViewController.numeroDaLista = numeroDaTabuada     //numeroDaLista: seta numero lido no switch case da Game1
+        navigationController?.pushViewController(gameViewController, animated: true)
+    }
+    
+    func openGame2(numeroDaTabuada: Int) {
+        guard let gameViewController = storyboard?.instantiateViewController(withIdentifier: "Game2ViewController") as? Game2ViewController else { return }
+        gameViewController.numeroDaLista = numeroDaTabuada
+        navigationController?.pushViewController(gameViewController, animated: true)
+    }
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

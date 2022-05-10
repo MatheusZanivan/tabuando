@@ -43,7 +43,7 @@
         <!--Game2 View Controller-->
         <scene sceneID="l6q-0I-X0r">
             <objects>
-                <viewController id="YW6-ez-iK9" customClass="Game2ViewController" customModule="Tabuando" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Game2ViewController" id="YW6-ez-iK9" customClass="Game2ViewController" customModule="Tabuando" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c7Z-wJ-zas">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

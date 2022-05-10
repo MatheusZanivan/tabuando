@@ -21,7 +21,7 @@ class Game1ViewController: UIViewController {
     private weak var centralizadorView: UIView?
     
     // Esse numero vai vir do clique do botao da listagem
-    var numeroDaLista = 1
+    var numeroDaLista : Int?
     
     // Lidar com a tabuada corrente
     var listaDeTabuadas: [Tabuada] = []
@@ -193,10 +193,10 @@ class Game1ViewController: UIViewController {
     @objc func updateUI() {
         faseLabel!.text = "\(tabuada.fase)"
         desafioLabel!.text = "\(tabuada.multiplicando) x \(tabuada.multiplicador) "
-        resposta1Button!.setTitle("\(tabuada.produto)", for: .normal)  //outlet do botao
-        resposta2Button!.setTitle("\(tabuada.resposta1)", for: .normal)
-        resposta3Button!.setTitle("\(tabuada.resposta2)", for: .normal)
-        resposta4Button!.setTitle("\(tabuada.resposta3)", for: .normal)
+        resposta1Button!.setTitle("\(tabuada.resposta1)", for: .normal)  //outlet do botao
+        resposta2Button!.setTitle("\(tabuada.resposta2)", for: .normal)
+        resposta3Button!.setTitle("\(tabuada.resposta3)", for: .normal)
+        resposta4Button!.setTitle("\(tabuada.resposta4)", for: .normal)
 //        resposta1Button!.backgroundColor = UIColor.systemPurple
 //        resposta2Button!.backgroundColor = UIColor.systemPurple
 //        resposta3Button!.backgroundColor = UIColor.systemPurple
@@ -249,13 +249,13 @@ class Game1ViewController: UIViewController {
     func pegarListaDeTabuadas() -> [Tabuada]{
         switch(numeroDaLista){
             case 1: return Desafios.tabuadaDoUm;
-            case 2: return Desafios.tabuadaDoDois;
+//            case 2: return Desafios.tabuadaDoDois;
             case 3: return Desafios.tabuadaDoTres;
-            case 4: return Desafios.tabuadaDoQuatro;
+//            case 4: return Desafios.tabuadaDoQuatro;
             case 5: return Desafios.tabuadaDoCinco;
-            case 6: return Desafios.tabuadaDoSeis;
+//            case 6: return Desafios.tabuadaDoSeis;
             case 7: return Desafios.tabuadaDoSete;
-            case 8: return Desafios.tabuadaDoOito;
+//            case 8: return Desafios.tabuadaDoOito;
             default: return Desafios.tabuadaDoNove;
         }
     }

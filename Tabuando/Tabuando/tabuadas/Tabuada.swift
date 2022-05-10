@@ -128,5 +128,16 @@ class Desafios {
         Tabuada(multiplicando: 9, multiplicador: 10, produto: 90,resposta1: 19,resposta2: 87,resposta3: 91,resposta4: 90,fase:"9x?")
     ]
     
-    static let tabuadaDoDesafio2 : [Tabuada] = []
+    static let tabuadaDoDesafio2 : [Tabuada] = [
+        Tabuada(multiplicando: 4, multiplicador: 3, produto: 12, resposta1: 4,resposta2: 12,resposta3: 2,resposta4: 10,fase:""),
+        Tabuada(multiplicando: 5, multiplicador: 2, produto: 10,resposta1: 8,resposta2: 7,resposta3: 13,resposta4: 10,fase:""),
+        Tabuada(multiplicando: 6, multiplicador: 7, produto: 42,resposta1: 40,resposta2: 42,resposta3: 47,resposta4: 46,fase:""),
+        Tabuada(multiplicando: 5, multiplicador: 4, produto: 20,resposta1: 8,resposta2: 12,resposta3: 20,resposta4: 16,fase:""),
+        Tabuada(multiplicando: 6, multiplicador: 5, produto: 30,resposta1: 10,resposta2: 20,resposta3: 30,resposta4: 15,fase:""),
+        Tabuada(multiplicando: 4, multiplicador: 6, produto: 24,resposta1: 16,resposta2: 24,resposta3: 22,resposta4: 20,fase:""),
+        Tabuada(multiplicando: 5, multiplicador: 7, produto: 35,resposta1: 28,resposta2: 18,resposta3: 30,resposta4: 35,fase:""),
+        Tabuada(multiplicando: 6, multiplicador: 8, produto: 48,resposta1: 48,resposta2: 32,resposta3: 8,resposta4: 40,fase:""),
+        Tabuada(multiplicando: 6, multiplicador: 9, produto: 54,resposta1: 55,resposta2: 29,resposta3: 54,resposta4: 36,fase:""),
+        Tabuada(multiplicando: 4, multiplicador: 10, produto: 40,resposta1: 40,resposta2: 14,resposta3: 45,resposta4: 10,fase:"")
+    ]
 }

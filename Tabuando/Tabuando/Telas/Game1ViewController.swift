@@ -216,7 +216,7 @@ class Game1ViewController: UIViewController {
                 passarParaProximaPergunta()
             } else {
                 terminarTeste()
-                ViewController().save()
+//                ViewController().save()
             }
         }
         
@@ -229,35 +229,28 @@ class Game1ViewController: UIViewController {
         updateUI()
     }
     
-    
     func terminarTeste() {
         guard let feedbackScreen = storyboard?.instantiateViewController(withIdentifier: "feedbackcontroller") as? feedbackViewController else { return }
         guard let main = storyboard?.instantiateViewController(withIdentifier: "mainViewController") as? ViewController else {return}
         feedbackScreen.score = self.score
         main.score = self.score
         if(numeroDaLista == 1){
-            main.scoreFases[0].0 = self.score
-            print(main.scoreFases[0].fase1)
+            Score().createScore(fase: 1, pontuacao: self.score)
         }
         else if(numeroDaLista == 3){
-            main.scoreFases[0].2 = self.score
-            print(main.scoreFases[0].fase3)
+            Score().createScore(fase: 3, pontuacao: self.score)
         }
         else if(numeroDaLista == 5){
-            main.scoreFases[0].5 = self.score
-            print(main.scoreFases[0].fase5)
+            Score().createScore(fase: 5, pontuacao: self.score)
         }
         else if(numeroDaLista == -2){
-            main.scoreFases[0].7 = self.score
-            print(main.scoreFases[0].desafio2)
+            Score().createScore(fase: -2, pontuacao: self.score)
         }
         else if(numeroDaLista == 7){
-            main.scoreFases[0].8 = self.score
-            print(main.scoreFases[0].fase7)
+            Score().createScore(fase: 7, pontuacao: self.score)
         }
         else if(numeroDaLista == 9){
-            main.scoreFases[0].10 = self.score
-            print(main.scoreFases[0].fase9)
+            Score().createScore(fase: 9, pontuacao: self.score)
         }
         
         

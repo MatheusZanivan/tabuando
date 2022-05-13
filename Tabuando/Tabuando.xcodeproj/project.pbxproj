@@ -11,6 +11,9 @@
 		8225FE4B280FAE940081266C /* Tabuada.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8225FE4A280FAE940081266C /* Tabuada.swift */; };
 		82DE5FF528205D9C001CFC21 /* Game2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DE5FF328205D9C001CFC21 /* Game2ViewController.swift */; };
 		F632A75A281B097E001F6B7F /* Tabuada2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F632A759281B097E001F6B7F /* Tabuada2.swift */; };
+		F63E1633282ECA9C007FDB54 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F63E1631282ECA9C007FDB54 /* Model.xcdatamodeld */; };
+		F63E1636282ECE68007FDB54 /* Score+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63E1634282ECE68007FDB54 /* Score+CoreDataClass.swift */; };
+		F63E1637282ECE68007FDB54 /* Score+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63E1635282ECE68007FDB54 /* Score+CoreDataProperties.swift */; };
 		F66A3FB1280DDD8200E33B23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66A3FB0280DDD8200E33B23 /* AppDelegate.swift */; };
 		F66A3FB3280DDD8200E33B23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66A3FB2280DDD8200E33B23 /* SceneDelegate.swift */; };
 		F66A3FB5280DDD8200E33B23 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66A3FB4280DDD8200E33B23 /* Main.swift */; };
@@ -30,6 +33,9 @@
 		8225FE4A280FAE940081266C /* Tabuada.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabuada.swift; sourceTree = "<group>"; };
 		82DE5FF328205D9C001CFC21 /* Game2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game2ViewController.swift; sourceTree = "<group>"; };
 		F632A759281B097E001F6B7F /* Tabuada2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabuada2.swift; sourceTree = "<group>"; };
+		F63E1632282ECA9C007FDB54 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		F63E1634282ECE68007FDB54 /* Score+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Score+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F63E1635282ECE68007FDB54 /* Score+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Score+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F66A3FAD280DDD8200E33B23 /* Tabuando.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tabuando.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F66A3FB0280DDD8200E33B23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F66A3FB2280DDD8200E33B23 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +95,16 @@
 			path = Telas;
 			sourceTree = "<group>";
 		};
+		F63E1638282ECE71007FDB54 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				F63E1631282ECA9C007FDB54 /* Model.xcdatamodeld */,
+				F63E1634282ECE68007FDB54 /* Score+CoreDataClass.swift */,
+				F63E1635282ECE68007FDB54 /* Score+CoreDataProperties.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		F66A3FA4280DDD8200E33B23 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +124,7 @@
 		F66A3FAF280DDD8200E33B23 /* Tabuando */ = {
 			isa = PBXGroup;
 			children = (
+				F63E1638282ECE71007FDB54 /* CoreData */,
 				F632A75C281B09CA001F6B7F /* Telas */,
 				F632A75B281B0995001F6B7F /* Delegate */,
 				F632A757281B0950001F6B7F /* tabuadas */,
@@ -205,6 +222,8 @@
 				82DE5FF528205D9C001CFC21 /* Game2ViewController.swift in Sources */,
 				F66A3FB1280DDD8200E33B23 /* AppDelegate.swift in Sources */,
 				F66A3FC7280DFB3500E33B23 /* CustomTableViewCell.swift in Sources */,
+				F63E1637282ECE68007FDB54 /* Score+CoreDataProperties.swift in Sources */,
+				F63E1636282ECE68007FDB54 /* Score+CoreDataClass.swift in Sources */,
 				F66A3FB3280DDD8200E33B23 /* SceneDelegate.swift in Sources */,
 				8225FE48280F9C9C0081266C /* Game1ViewController.swift in Sources */,
 				F67F7728281B6BAD006BA457 /* tituloDaCell.swift in Sources */,
@@ -212,6 +231,7 @@
 				F632A75A281B097E001F6B7F /* Tabuada2.swift in Sources */,
 				F6D6433728109F7000AAC8C8 /* FaseBotao.swift in Sources */,
 				8225FE4B280FAE940081266C /* Tabuada.swift in Sources */,
+				F63E1633282ECA9C007FDB54 /* Model.xcdatamodeld in Sources */,
 				F685567028231044001554CD /* feedbackViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +452,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F63E1631282ECA9C007FDB54 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F63E1632282ECA9C007FDB54 /* Model.xcdatamodel */,
+			);
+			currentVersion = F63E1632282ECA9C007FDB54 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F66A3FA5280DDD8200E33B23 /* Project object */;
 }

@@ -15,8 +15,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     private weak var tableView: UITableView?
     
     var score : Int?
-    
-    
+
     let customCell = FaseTableViewCell()
     
     struct CelulaDasFases{
@@ -25,7 +24,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         var isLocked : Bool = true
     }
     
-    var scoreFases: [(fase1: Int, fase2: Int, fase3: Int, desafio1: Int, fase4: Int, fase5: Int,fase6: Int, desafio2: Int, fase7: Int, fase8: Int, fase9: Int,desafio3: Int)] = [(-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1)]
+//    var scoreFases: [(fase1: Int, fase2: Int, fase3: Int, desafio1: Int, fase4: Int, fase5: Int,fase6: Int, desafio2: Int, fase7: Int, fase8: Int, fase9: Int,desafio3: Int)] = [(-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1)]
     
     
     
@@ -48,8 +47,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        load()
-        print(scoreFases[0].fase1)
+        
+        let list = Score().getAllScores()
+        
+        print("=====================================================\nLista de pontuação:")
+
+        for score in list {
+            print("fase: \(score.fase)\tpontuação: \(score.pontuacao)\tdata: \(score.data ?? Date.distantPast)")
+        }
+
+        print("=====================================================")
+        
+        
         self.tableView?.reloadData()
     }
     
@@ -132,21 +141,23 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: customCell.identifier, for: indexPath) as! FaseTableViewCell
         
+        let score = Score().getLatestScoreByFase(fase: indexPath.row + 1)
+        
+        print(score)
+        
         cell.backgroundColor = .clear
         cell.faseBotao?.nomeFase?.text = fases[indexPath.row].nivel
         cell.faseBotao?.tag = indexPath.row
         
-        if(scoreFases[0].fase1 > -1){
-            cell.faseBotao?.isLocked = false
-            cell.faseBotao?.pontuacao?.text = String(scoreFases[0].fase1)
+        if(score > -1){
+//            cell.faseBotao?.isLocked = false
+//            cell.faseBotao?.pontuacao?.text = String(.fase1)
         }
 //        cell.isUserInteractionEnabled = false
         
         
         
         cell.faseBotao?.addTarget(self, action: #selector(teste(_:)), for: .touchUpInside)
-        
-        print(cell.faseBotao?.isLocked)
         
         return cell
     }
@@ -233,14 +244,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
   
     
-    func save(){
-            UserDefaults().setValue(scoreFases[0].fase1, forKey: "saveG1")
-        
-    }
-    
-    func load(){
-          if let loadSocre = UserDefaults().value(forKey: "saveG1") as? Int{
-            scoreFases[0].fase1 = loadSocre}
-    }
+//    func save(){
+//            UserDefaults().setValue(scoreFases[0].fase1, forKey: "saveG1")
+//
+//    }
+//
+//    func load(){
+//          if let loadSocre = UserDefaults().value(forKey: "saveG1") as? Int{
+//            scoreFases[0].fase1 = loadSocre}
+//    }
 }
 

@@ -210,7 +210,7 @@ class Game2ViewController: UIViewController {
             tabuada2 = listaDeTabuadas[questionNumber]
         } else {
             terminarTeste()
-            ViewController().save()
+//            ViewController().save()
             
         }
         
@@ -224,30 +224,24 @@ class Game2ViewController: UIViewController {
         guard let feedbackScreen = storyboard?.instantiateViewController(withIdentifier: "feedbackcontroller") as? feedbackViewController else { return }
         guard let main = storyboard?.instantiateViewController(withIdentifier: "mainViewController") as? ViewController else {return}
         feedbackScreen.score = self.score
-//        main.score = self.score
+        main.score = self.score
         if(numeroDaLista == 2){
-            main.scoreFases[0].fase2 = self.score
-            print(main.scoreFases[0].fase2)
+            Score().createScore(fase: 2, pontuacao: self.score)
         }
         else if(numeroDaLista == -1){
-            main.scoreFases[0].desafio1 = self.score
-            print(main.scoreFases[0].desafio1)
+            Score().createScore(fase: -1, pontuacao: self.score)
         }
         else if(numeroDaLista == 4){
-            main.scoreFases[0].fase4 = self.score
-            print(main.scoreFases[0].fase4)
+            Score().createScore(fase: 4, pontuacao: self.score)
         }
         else if(numeroDaLista == 6){
-            main.scoreFases[0].fase6 = self.score
-            print(main.scoreFases[0].fase6)
+            Score().createScore(fase: 6, pontuacao: self.score)
         }
         else if(numeroDaLista == 8){
-            main.scoreFases[0].fase8 = self.score
-            print(main.scoreFases[0].fase8)
+            Score().createScore(fase: 8, pontuacao: self.score)
         }
         else if(numeroDaLista == -3){
-            main.scoreFases[0].desafio3 = self.score
-            print(main.scoreFases[0].desafio3)
+            Score().createScore(fase: -3, pontuacao: self.score)
         }
         
         

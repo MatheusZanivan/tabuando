@@ -28,7 +28,7 @@ class Game1ViewController: UIViewController {
     var tabuada: Tabuada!
     var questionNumber = 0
     var score = 0
-    
+    var recebeNumero = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -209,13 +209,14 @@ class Game1ViewController: UIViewController {
             sender.backgroundColor = UIColor.systemRed
         }
         
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { [self]_ in
+        Timer.scheduledTimer(withTimeInterval: 0.4, repeats: false) { [self]_ in
             sender.backgroundColor = .systemPurple
             
             if questionNumber + 1 < listaDeTabuadas.count{
                 passarParaProximaPergunta()
             } else {
                 terminarTeste()
+                ViewController().save()
             }
         }
         
@@ -231,7 +232,35 @@ class Game1ViewController: UIViewController {
     
     func terminarTeste() {
         guard let feedbackScreen = storyboard?.instantiateViewController(withIdentifier: "feedbackcontroller") as? feedbackViewController else { return }
+        guard let main = storyboard?.instantiateViewController(withIdentifier: "mainViewController") as? ViewController else {return}
         feedbackScreen.score = self.score
+        main.score = self.score
+        if(numeroDaLista == 1){
+            main.scoreFases[0].0 = self.score
+            print(main.scoreFases[0].fase1)
+        }
+        else if(numeroDaLista == 3){
+            main.scoreFases[0].2 = self.score
+            print(main.scoreFases[0].fase3)
+        }
+        else if(numeroDaLista == 5){
+            main.scoreFases[0].5 = self.score
+            print(main.scoreFases[0].fase5)
+        }
+        else if(numeroDaLista == -2){
+            main.scoreFases[0].7 = self.score
+            print(main.scoreFases[0].desafio2)
+        }
+        else if(numeroDaLista == 7){
+            main.scoreFases[0].8 = self.score
+            print(main.scoreFases[0].fase7)
+        }
+        else if(numeroDaLista == 9){
+            main.scoreFases[0].10 = self.score
+            print(main.scoreFases[0].fase9)
+        }
+        
+        
         feedbackScreen.modalPresentationStyle = .fullScreen
         feedbackScreen.voltarTelaInicial = {
             self.navigationController?.popToRootViewController(animated: false)

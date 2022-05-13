@@ -25,7 +25,7 @@ class Game2 {
         Tabuada2(multiplicando: 2 , multiplicador: 6, produto: 12, answer: "True", fase: "2x?"),
         Tabuada2(multiplicando: 2 , multiplicador: 7, produto: 21, answer: "False", fase: "2x?"),
         Tabuada2(multiplicando: 2 , multiplicador: 8, produto: 12, answer: "False", fase: "2x?"),
-        Tabuada2(multiplicando: 2 , multiplicador: 9, produto: 19, answer: "True", fase: "2x?"),
+        Tabuada2(multiplicando: 2 , multiplicador: 9, produto: 19, answer: "False", fase: "2x?"),
         Tabuada2(multiplicando: 2 , multiplicador: 10, produto: 20, answer: "True", fase: "2x?")
     ]
     static let quizQuatro : [Tabuada2] = [
@@ -62,7 +62,7 @@ class Game2 {
         Tabuada2(multiplicando: 8 , multiplicador: 7, produto: 56, answer: "True", fase: "8x?"),
         Tabuada2(multiplicando: 8 , multiplicador: 8, produto: 65, answer: "False", fase: "8x?"),
         Tabuada2(multiplicando: 8 , multiplicador: 9, produto: 72, answer: "True", fase: "8x?"),
-        Tabuada2(multiplicando: 8 , multiplicador: 10, produto: 20, answer: "True", fase: "8x?")
+        Tabuada2(multiplicando: 8 , multiplicador: 10, produto: 20, answer: "False", fase: "8x?")
     ]
     
     static let quizDesafio1 : [Tabuada2] = [

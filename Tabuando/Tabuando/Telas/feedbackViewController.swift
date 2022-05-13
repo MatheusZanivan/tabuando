@@ -43,16 +43,16 @@ class feedbackViewController: UIViewController {
         fraseDeFeedbackView.layer.cornerRadius = 35
         
         var feedbackLabel = "Parabéns!"
-        var feedbackImage = "Ativo 3"
+        var feedbackImage = "xVerde"
         var scoreColor = UIColor(red: 0.204, green: 0.78, blue: 0.349, alpha: 1)
         if (score! < 8){
             if (score! < 6){
                 feedbackLabel = "Que pena!"
-                feedbackImage = "Ativo 5"
+                feedbackImage = "xVermelho"
                 scoreColor = UIColor(red: 1, green: 0.22, blue: 0.188, alpha: 1)
             } else {
                 feedbackLabel = "Foi perto!"
-                feedbackImage = "Ativo 4"
+                feedbackImage = "xAmarelo"
                 scoreColor = UIColor(red: 1, green: 0.8, blue: 0, alpha: 1)
             }
         }

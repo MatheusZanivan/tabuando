@@ -15,16 +15,24 @@ class FaseBotao: UIControl {
     public weak var cadeado: UIImageView?
     public weak var imageTitle: UIImageView?
     
+    var score : Int?
+    
     private var image: UIImage {
+        
         return isLocked ? UIImage(systemName: "lock.fill")!.withTintColor(.black, renderingMode: .alwaysOriginal) : UIImage(systemName: "lock.fill")!.withTintColor(.clear, renderingMode: .alwaysOriginal)
     }
     
     public var isLocked = true {
         didSet {
-            isLocked = !isLocked
+            if isLocked {
+                self.cadeado?.isHidden = false
+                self.pontuacao?.isHidden = true
+            } else {
+                self.cadeado?.isHidden = true
+                self.pontuacao?.isHidden = false
+            }
         }
     }
-    
     // construtor
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -50,6 +58,7 @@ class FaseBotao: UIControl {
         clipsToBounds = true
         backgroundColor = .systemGray5
         
+        
         nomeFase.translatesAutoresizingMaskIntoConstraints = false
         pontuacao.translatesAutoresizingMaskIntoConstraints = false
         cadeado.translatesAutoresizingMaskIntoConstraints = false
@@ -67,8 +76,12 @@ class FaseBotao: UIControl {
             cadeado.centerYAnchor.constraint(equalTo: centerYAnchor),
         ])
         
+//        if(score){}
+        
+        
         self.nomeFase = nomeFase
         self.pontuacao = pontuacao
         self.cadeado = cadeado
+        
     }
 }

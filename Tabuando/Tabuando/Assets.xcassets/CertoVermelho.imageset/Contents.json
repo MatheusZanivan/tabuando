@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Ativo 4errado.png",
+      "filename" : "Ativo 2Certo - Vermelho.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Ativo 4errado@2x.png",
+      "filename" : "Ativo 2Certo - Vermelho@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Ativo 4errado@3x.png",
+      "filename" : "Ativo 2Certo - Vermelho@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

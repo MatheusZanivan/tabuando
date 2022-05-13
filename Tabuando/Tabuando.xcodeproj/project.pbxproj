@@ -22,7 +22,6 @@
 		F67380B1280F2A0700BF6F1D /* FaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F67380AF280F2A0700BF6F1D /* FaseTableViewCell.xib */; };
 		F67F7728281B6BAD006BA457 /* tituloDaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67F7727281B6BAD006BA457 /* tituloDaCell.swift */; };
 		F685567028231044001554CD /* feedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685566F28231044001554CD /* feedbackViewController.swift */; };
-		F69512BE28289B0E00F7A11F /* acertos.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69512BD28289B0E00F7A11F /* acertos.swift */; };
 		F6D6433728109F7000AAC8C8 /* FaseBotao.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D6433628109F7000AAC8C8 /* FaseBotao.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +43,6 @@
 		F67380AF280F2A0700BF6F1D /* FaseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FaseTableViewCell.xib; sourceTree = "<group>"; };
 		F67F7727281B6BAD006BA457 /* tituloDaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tituloDaCell.swift; sourceTree = "<group>"; };
 		F685566F28231044001554CD /* feedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = feedbackViewController.swift; sourceTree = "<group>"; };
-		F69512BD28289B0E00F7A11F /* acertos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = acertos.swift; sourceTree = "<group>"; };
 		F6D6433628109F7000AAC8C8 /* FaseBotao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaseBotao.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,7 +108,6 @@
 		F66A3FAF280DDD8200E33B23 /* Tabuando */ = {
 			isa = PBXGroup;
 			children = (
-				F69512BD28289B0E00F7A11F /* acertos.swift */,
 				F632A75C281B09CA001F6B7F /* Telas */,
 				F632A75B281B0995001F6B7F /* Delegate */,
 				F632A757281B0950001F6B7F /* tabuadas */,
@@ -204,7 +201,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F69512BE28289B0E00F7A11F /* acertos.swift in Sources */,
 				F66A3FB5280DDD8200E33B23 /* Main.swift in Sources */,
 				82DE5FF528205D9C001CFC21 /* Game2ViewController.swift in Sources */,
 				F66A3FB1280DDD8200E33B23 /* AppDelegate.swift in Sources */,

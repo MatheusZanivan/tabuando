@@ -28,6 +28,7 @@ class Game2ViewController: UIViewController {
     var tabuada2: Tabuada2!
     var questionNumber = 0
     var score = 0
+    var recebeNumero = 0
     
     //bloco a ser carregado assim que a tela for inicializada
     override func viewDidLoad() {
@@ -55,7 +56,7 @@ class Game2ViewController: UIViewController {
        
         faseImage.image = UIImage(named: "Ativo 15")
 
-        biscoitao.image = UIImage(named: "Ativo 1")
+        biscoitao.image = UIImage(named: "Biscoito")
         view.sendSubviewToBack(biscoitao)
         
         multiplicador.textColor = .white
@@ -138,14 +139,7 @@ class Game2ViewController: UIViewController {
             falseButton.heightAnchor.constraint(equalToConstant: 110),
             falseButton.leftAnchor.constraint(equalTo: trueButton.rightAnchor, constant: 70),
             falseButton.centerYAnchor.constraint(equalTo: trueButton.centerYAnchor),
-            
-            
-            
-            
-            
-            
-            
-            
+        
             
         ])
 
@@ -169,10 +163,12 @@ class Game2ViewController: UIViewController {
     //fç chamando outra fç
     @objc func trueClicado(_ sender: UIButton) {
         submitAnswer(userAnswer: "True", sender: sender)
+        
     }
     
     @objc func falseClicado(_ sender: UIButton) {
         submitAnswer(userAnswer: "False", sender: sender)
+        
     }
     
     func submitAnswer(userAnswer: String, sender: UIButton){
@@ -184,10 +180,29 @@ class Game2ViewController: UIViewController {
         if (userAnswer == actualAnswer) {
             score += 1
 //            print("Correct!")
-            sender.backgroundColor = UIColor.green
+            if (userAnswer == "True"){
+                sender.setImage(UIImage(named: "CertoVerde"), for: .normal)
+                Timer.scheduledTimer(withTimeInterval: 0.4, repeats: false) { []_ in
+                    sender.setImage(UIImage(named: "Certo"), for: .normal)}
+            }
+            else{
+                sender.setImage(UIImage(named: "ErradoVerde"), for: .normal)
+                Timer.scheduledTimer(withTimeInterval: 0.4, repeats: false) { []_ in
+                    sender.setImage(UIImage(named: "Errado"), for: .normal)}
+            }
+            
         } else {
 //            print("Wrong!")
-            sender.backgroundColor = UIColor.red
+            if (userAnswer == "False"){
+                sender.setImage(UIImage(named: "ErradoVermelho"), for: .normal)
+                Timer.scheduledTimer(withTimeInterval: 0.4, repeats: false) { []_ in
+                    sender.setImage(UIImage(named: "Errado"), for: .normal)}
+            }
+            else{
+                sender.setImage(UIImage(named: "CertoVermelho"), for: .normal)
+                Timer.scheduledTimer(withTimeInterval: 0.4, repeats: false) { []_ in
+                    sender.setImage(UIImage(named: "Certo"), for: .normal)}
+            }
         }
         
         if questionNumber + 1 < listaDeTabuadas.count{
@@ -195,7 +210,8 @@ class Game2ViewController: UIViewController {
             tabuada2 = listaDeTabuadas[questionNumber]
         } else {
             terminarTeste()
-            return
+            ViewController().save()
+            
         }
         
         Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
@@ -206,7 +222,36 @@ class Game2ViewController: UIViewController {
     //chamando a tela de score
     func terminarTeste() {
         guard let feedbackScreen = storyboard?.instantiateViewController(withIdentifier: "feedbackcontroller") as? feedbackViewController else { return }
+        guard let main = storyboard?.instantiateViewController(withIdentifier: "mainViewController") as? ViewController else {return}
         feedbackScreen.score = self.score
+//        main.score = self.score
+        if(numeroDaLista == 2){
+            main.scoreFases[0].fase2 = self.score
+            print(main.scoreFases[0].fase2)
+        }
+        else if(numeroDaLista == -1){
+            main.scoreFases[0].desafio1 = self.score
+            print(main.scoreFases[0].desafio1)
+        }
+        else if(numeroDaLista == 4){
+            main.scoreFases[0].fase4 = self.score
+            print(main.scoreFases[0].fase4)
+        }
+        else if(numeroDaLista == 6){
+            main.scoreFases[0].fase6 = self.score
+            print(main.scoreFases[0].fase6)
+        }
+        else if(numeroDaLista == 8){
+            main.scoreFases[0].fase8 = self.score
+            print(main.scoreFases[0].fase8)
+        }
+        else if(numeroDaLista == -3){
+            main.scoreFases[0].desafio3 = self.score
+            print(main.scoreFases[0].desafio3)
+        }
+        
+        
+        
         feedbackScreen.modalPresentationStyle = .fullScreen
         feedbackScreen.voltarTelaInicial = {
             self.navigationController?.popToRootViewController(animated: false)

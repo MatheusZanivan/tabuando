@@ -136,10 +136,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return fases.count
     }
     
-    
-    
-    
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: customCell.identifier, for: indexPath) as! FaseTableViewCell
         let barraDez = "/10"

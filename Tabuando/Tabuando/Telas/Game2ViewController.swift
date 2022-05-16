@@ -30,6 +30,7 @@ class Game2ViewController: UIViewController {
     var score = 0
     var recebeNumero = 0
     
+    var numeroFoiSorteado = [true,false,false,false,false,false,false,false,false,false]
     //bloco a ser carregado assim que a tela for inicializada
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -214,7 +215,16 @@ class Game2ViewController: UIViewController {
         
         if questionNumber + 1 < listaDeTabuadas.count{
             questionNumber += 1
-            tabuada2 = listaDeTabuadas[questionNumber]
+            var saiLoop = false
+            
+            repeat{
+            let numeroSortado = Int.random(in: 0..<10)
+            if(numeroFoiSorteado[numeroSortado] == false){
+                numeroFoiSorteado[numeroSortado] = true
+                tabuada2 = listaDeTabuadas[numeroSortado]
+                updateUI()
+                saiLoop = true
+            }}while(!saiLoop)
         } else {
             terminarTeste()
 //            ViewController().save()

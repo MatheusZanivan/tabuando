@@ -50,7 +50,7 @@ public class Score: NSManagedObject {
         
         do { auxList = try context.fetch(fetchRequest)} catch { print(error) }
         
-        let resultado = (auxList.isEmpty) ? -1 : Int(auxList[0].pontuacao)
+        let resultado = (auxList.isEmpty) ? 0 : Int(auxList[0].pontuacao)
         
         return resultado
     }

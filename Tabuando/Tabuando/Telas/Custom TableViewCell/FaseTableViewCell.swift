@@ -16,6 +16,15 @@ class FaseTableViewCell: UITableViewCell {
     public func nib() -> UINib{
         return UINib(nibName: identifier, bundle: nil)
     }
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        faseBotao?.pontuacao?.text = ""
+        faseBotao?.cadeado?.image = .init()
+        faseBotao?.nomeFase?.text = ""
+        faseBotao?.imageTitle?.image = .init()
+    }
+    
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

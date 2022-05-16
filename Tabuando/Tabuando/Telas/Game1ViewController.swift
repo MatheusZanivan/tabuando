@@ -29,6 +29,8 @@ class Game1ViewController: UIViewController {
     var questionNumber = 0
     var score = 0
     var recebeNumero = 0
+    
+    var numeroFoiSorteado = [true,false,false,false,false,false,false,false,false,false]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -231,8 +233,17 @@ class Game1ViewController: UIViewController {
     
     func passarParaProximaPergunta() {
         questionNumber += 1
-        tabuada = listaDeTabuadas[questionNumber]
-        updateUI()
+        var saiLoop = false
+        
+        repeat{
+        let numeroSortado = Int.random(in: 0..<10)
+        if(numeroFoiSorteado[numeroSortado] == false){
+            numeroFoiSorteado[numeroSortado] = true
+            tabuada = listaDeTabuadas[numeroSortado]
+            updateUI()
+            saiLoop = true
+        }}while(!saiLoop)
+
     }
     
     func terminarTeste() {

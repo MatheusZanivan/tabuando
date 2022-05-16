@@ -219,8 +219,6 @@ class Game1ViewController: UIViewController {
 //                ViewController().save()
             }
         }
-        
-        
     }
     
     func passarParaProximaPergunta() {
@@ -231,26 +229,31 @@ class Game1ViewController: UIViewController {
     
     func terminarTeste() {
         guard let feedbackScreen = storyboard?.instantiateViewController(withIdentifier: "feedbackcontroller") as? feedbackViewController else { return }
-        guard let main = storyboard?.instantiateViewController(withIdentifier: "mainViewController") as? ViewController else {return}
         feedbackScreen.score = self.score
-        main.score = self.score
+//        main.score = self.score
         if(numeroDaLista == 1){
+            if(self.score > 7){ UserDefaults.standard.setValue(false, forKey: "fase 2")}
             Score().createScore(fase: 1, pontuacao: self.score)
         }
         else if(numeroDaLista == 3){
+            if(self.score > 7){ UserDefaults.standard.setValue(false, forKey: "fase 4")}
             Score().createScore(fase: 3, pontuacao: self.score)
         }
-        else if(numeroDaLista == 5){
-            Score().createScore(fase: 5, pontuacao: self.score)
+        else if(numeroDaLista ==  6){
+            if(self.score > 7){ UserDefaults.standard.setValue(false, forKey: "fase 7")}
+            Score().createScore(fase: 6, pontuacao: self.score)
         }
-        else if(numeroDaLista == -2){
-            Score().createScore(fase: -2, pontuacao: self.score)
-        }
-        else if(numeroDaLista == 7){
-            Score().createScore(fase: 7, pontuacao: self.score)
+        else if(numeroDaLista == 8){
+            if(self.score > 7){ UserDefaults.standard.setValue(false, forKey: "fase 9")}
+            Score().createScore(fase: 8, pontuacao: self.score)
         }
         else if(numeroDaLista == 9){
+            if(self.score > 7){ UserDefaults.standard.setValue(false, forKey: "fase 10")}
             Score().createScore(fase: 9, pontuacao: self.score)
+        }
+        else if(numeroDaLista == 11){
+            if(self.score > 7){ UserDefaults.standard.setValue(false, forKey: "fase 12")}
+            Score().createScore(fase: 11, pontuacao: self.score)
         }
         
         
@@ -260,6 +263,7 @@ class Game1ViewController: UIViewController {
         }
         
         present(feedbackScreen, animated: true)
+        
     }
     
     
@@ -270,11 +274,11 @@ class Game1ViewController: UIViewController {
 //            case 2: return Desafios.tabuadaDoDois;
             case 3: return Desafios.tabuadaDoTres;
 //            case 4: return Desafios.tabuadaDoQuatro;
-            case 5: return Desafios.tabuadaDoCinco;
+            case 6: return Desafios.tabuadaDoCinco;
 //            case 6: return Desafios.tabuadaDoSeis;
-            case 7: return Desafios.tabuadaDoSete;
+            case 9: return Desafios.tabuadaDoSete;
 //            case 8: return Desafios.tabuadaDoOito;
-            case -2: return Desafios.tabuadaDoDesafio2;
+            case 8: return Desafios.tabuadaDoDesafio2;
             default: return Desafios.tabuadaDoNove;
         }
     }

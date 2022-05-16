@@ -222,26 +222,32 @@ class Game2ViewController: UIViewController {
     //chamando a tela de score
     func terminarTeste() {
         guard let feedbackScreen = storyboard?.instantiateViewController(withIdentifier: "feedbackcontroller") as? feedbackViewController else { return }
-        guard let main = storyboard?.instantiateViewController(withIdentifier: "mainViewController") as? ViewController else {return}
+        
         feedbackScreen.score = self.score
-        main.score = self.score
+//        main.score = self.score
         if(numeroDaLista == 2){
+            if(self.score > 7){ UserDefaults.standard.setValue(false, forKey: "fase 3")}
             Score().createScore(fase: 2, pontuacao: self.score)
         }
-        else if(numeroDaLista == -1){
-            Score().createScore(fase: -1, pontuacao: self.score)
-        }
         else if(numeroDaLista == 4){
+            if(self.score > 7){ UserDefaults.standard.setValue(false, forKey: "fase 5")}
             Score().createScore(fase: 4, pontuacao: self.score)
         }
-        else if(numeroDaLista == 6){
-            Score().createScore(fase: 6, pontuacao: self.score)
+        else if(numeroDaLista == 5){
+            if(self.score > 7){ UserDefaults.standard.setValue(false, forKey: "fase 6")}
+            Score().createScore(fase: 5, pontuacao: self.score)
         }
-        else if(numeroDaLista == 8){
-            Score().createScore(fase: 8, pontuacao: self.score)
+        else if(numeroDaLista == 7){
+            if(self.score > 7){ UserDefaults.standard.setValue(false, forKey: "fase 8")}
+            Score().createScore(fase: 7, pontuacao: self.score)
         }
-        else if(numeroDaLista == -3){
-            Score().createScore(fase: -3, pontuacao: self.score)
+        else if(numeroDaLista == 10){
+            if(self.score > 7){ UserDefaults.standard.setValue(false, forKey: "fase 11")}
+            Score().createScore(fase: 10, pontuacao: self.score)
+        }
+        else if(numeroDaLista == 12){
+            if(self.score > 7){ UserDefaults.standard.setValue(false, forKey: "fase 12")}
+            Score().createScore(fase: 12, pontuacao: self.score)
         }
         
         
@@ -272,14 +278,15 @@ class Game2ViewController: UIViewController {
     func listaTabuadasTelaInicial() -> [Tabuada2]{
         switch(numeroDaLista){
             case 2: return Game2.quizDois;
-            case 4: return Game2.quizQuatro;
-            case 6: return Game2.quizSeis;
-            case 8: return Game2.quizOito;
-            case -1: return Game2.quizDesafio1;
-            case -3: return Game2.quizDesafio3;
-            default: return Game2.quizOito;
+            case 5: return Game2.quizQuatro;
+            case 7: return Game2.quizSeis;
+            case 10: return Game2.quizOito;
+            case 4: return Game2.quizDesafio1;
+            default:  return Game2.quizDesafio3;
         }
     }
+    
+    
     
 
 }

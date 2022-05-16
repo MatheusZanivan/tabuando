@@ -14,11 +14,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //    private weak var titleImage: UIImageView?
     private weak var tableView: UITableView?
     
-    var score : Int?
+//    var score : Int?
 
     let customCell = FaseTableViewCell()
     
     struct CelulaDasFases{
+        let nome : String
         let nivel: String
 //        let score : Int
         var isLocked : Bool = true
@@ -26,47 +27,44 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
 //    var scoreFases: [(fase1: Int, fase2: Int, fase3: Int, desafio1: Int, fase4: Int, fase5: Int,fase6: Int, desafio2: Int, fase7: Int, fase8: Int, fase9: Int,desafio3: Int)] = [(-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1)]
     
-    
-    
-    var scores: [(modo1: Int, modo2: Int)] = []
-    
-    let fases : [CelulaDasFases] = [
-        CelulaDasFases(nivel:"1x?",isLocked: false),
-        CelulaDasFases(nivel:"2x?"),
-        CelulaDasFases(nivel:"3x?"),
-        CelulaDasFases(nivel:"Desafio"),
-        CelulaDasFases(nivel:"4x?"),
-        CelulaDasFases(nivel:"5x?"),
-        CelulaDasFases(nivel:"6x?"),
-        CelulaDasFases(nivel:"Desafio"),
-        CelulaDasFases(nivel:"7x?"),
-        CelulaDasFases(nivel:"8x?"),
-        CelulaDasFases(nivel:"9x?"),
-        CelulaDasFases(nivel:"Desafio")
+    var fases : [CelulaDasFases] = [
+        CelulaDasFases(nome: "fase 1",nivel:"1x?",isLocked: false),
+        CelulaDasFases(nome: "fase 2",nivel:"2x?"),
+        CelulaDasFases(nome: "fase 3",nivel:"3x?"),
+        CelulaDasFases(nome: "fase 4",nivel:"Desafio"),
+        CelulaDasFases(nome: "fase 5",nivel:"4x?"),
+        CelulaDasFases(nome: "fase 6",nivel:"5x?"),
+        CelulaDasFases(nome: "fase 7",nivel:"6x?"),
+        CelulaDasFases(nome: "fase 8",nivel:"Desafio"),
+        CelulaDasFases(nome: "fase 9",nivel:"7x?"),
+        CelulaDasFases(nome: "fase 10",nivel:"8x?"),
+        CelulaDasFases(nome: "fase 11",nivel:"9x?"),
+        CelulaDasFases(nome: "fase 12",nivel:"Desafio")
     ]
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        let list = Score().getAllScores()
-        
-        print("=====================================================\nLista de pontuação:")
-
-        for score in list {
-            print("fase: \(score.fase)\tpontuação: \(score.pontuacao)\tdata: \(score.data ?? Date.distantPast)")
+        for i in 1...12{
+            print(Score().getLatestScoreByFase(fase: i))
         }
+                    
 
-        print("=====================================================")
-        
-        
+//        let list = Score().getAllScores()
+
+//        print("========================================================\nLista de pontuação:")
+//
+//        for score in list {
+//            print("fase: \(score.fase)\tpontuação: \(score.pontuacao)\tdata: \(score.data ?? Date.distantPast)")
+//        }
+//
+//        print("========================================================")
+
+
         self.tableView?.reloadData()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        scores.append((modo1: 10, modo2: 0))
-        print(scores)
         
 //        let titleImage = UIImageView()
         let backgroundImage = UIImageView()
@@ -138,27 +136,36 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return fases.count
     }
     
+    
+    
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: customCell.identifier, for: indexPath) as! FaseTableViewCell
-        
+        let barraDez = "/10"
         let score = Score().getLatestScoreByFase(fase: indexPath.row + 1)
-        
-        print(score)
         
         cell.backgroundColor = .clear
         cell.faseBotao?.nomeFase?.text = fases[indexPath.row].nivel
         cell.faseBotao?.tag = indexPath.row
-        
-        if(score > -1){
-//            cell.faseBotao?.isLocked = false
-//            cell.faseBotao?.pontuacao?.text = String(.fase1)
+        cell.faseBotao?.cadeado?.image = UIImage(systemName: "lock.fill")!.withTintColor(.black, renderingMode: .alwaysOriginal)
+        cell.faseBotao?.cadeado?.isHidden = true
+       
+        if(score > 0){
+            cell.faseBotao?.pontuacao?.text = String(score) + "\(barraDez)"
         }
-//        cell.isUserInteractionEnabled = false
-        
-        
-        
+
+        if(UserDefaults.standard.bool(forKey: fases[indexPath.row].nome) == true){
+            cell.isUserInteractionEnabled = false
+            cell.faseBotao?.cadeado?.isHidden = false
+            cell.faseBotao?.pontuacao?.isHidden = true
+        } else {
+            cell.isUserInteractionEnabled = true
+            cell.faseBotao?.pontuacao?.isHidden = false
+        }
+
         cell.faseBotao?.addTarget(self, action: #selector(teste(_:)), for: .touchUpInside)
-        
+    
         return cell
     }
     
@@ -166,41 +173,39 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         switch sender.tag {
         case 0:
             openGame1(numeroDaTabuada: 1)
-            
             break
         case 1:
             openGame2(numeroDaTabuada: 2)
-            
             break
         case 2:
             openGame1(numeroDaTabuada: 3)
             break
         case 3:
-            openGame2(numeroDaTabuada: -1)
-            break
-        case 4:
             openGame2(numeroDaTabuada: 4)
             break
+        case 4:
+            openGame2(numeroDaTabuada: 5)
+            break
         case 5:
-            openGame1(numeroDaTabuada: 5)
+            openGame1(numeroDaTabuada: 6)
             break
         case 6:
-            openGame2(numeroDaTabuada: 6)
+            openGame2(numeroDaTabuada: 7)
             break
         case 7:
-            openGame1(numeroDaTabuada: -2)
+            openGame1(numeroDaTabuada: 8)
             break
         case 8:
-            openGame1(numeroDaTabuada: 7)
-            break
-        case 9:
-            openGame2(numeroDaTabuada: 8)
-            break
-        case 10:
             openGame1(numeroDaTabuada: 9)
             break
+        case 9:
+            openGame2(numeroDaTabuada: 10)
+            break
+        case 10:
+            openGame1(numeroDaTabuada: 11)
+            break
         default:
-            openGame2(numeroDaTabuada: -3)
+            openGame2(numeroDaTabuada: 12)
         }
         
         // mudar a cor do botão
@@ -209,6 +214,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             sender.alpha = 1.0
         }
     }
+    
+//    func desbloqueiaProxFase(){
+//        var faseAtual = openGame1(numeroDaTabuada: )
+//    }
     
     func openGame1(numeroDaTabuada: Int) {
         guard let gameViewController = storyboard?.instantiateViewController(withIdentifier: "Game1ViewController") as? Game1ViewController else { return }
@@ -223,6 +232,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         navigationController?.pushViewController(gameViewController, animated: true)
     }
+    
+
     
     
 //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -242,6 +253,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
+    
   
     
 //    func save(){

@@ -54,7 +54,14 @@ class Game2ViewController: UIViewController {
         view.addSubview(trueButton)
         view.addSubview(falseButton)
        
-        faseImage.image = UIImage(named: "Ativo 15")
+        if (numeroDaLista == 4 || numeroDaLista == 12) {
+            faseImage.image = UIImage(named: "TopDesafio")
+        }else{
+            faseImage.image = UIImage(named: "Ativo 15")
+        }
+        
+        tituloTabuada.font = UIFont.systemFont(ofSize: 26)
+        tituloTabuada.textColor = .white
 
         biscoitao.image = UIImage(named: "Biscoito")
         view.sendSubviewToBack(biscoitao)
@@ -282,11 +289,8 @@ class Game2ViewController: UIViewController {
             case 7: return Game2.quizSeis;
             case 10: return Game2.quizOito;
             case 4: return Game2.quizDesafio1;
-            default:  return Game2.quizDesafio3;
+            default: return Game2.quizDesafio3
         }
     }
     
-    
-    
-
 }

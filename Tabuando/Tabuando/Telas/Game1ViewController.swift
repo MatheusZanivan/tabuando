@@ -66,7 +66,11 @@ class Game1ViewController: UIViewController {
         self.view.addSubview(centralizadorView)
         view.sendSubviewToBack(centralizadorView)
         
-        faseImage.image = UIImage(named: "Ativo 15")
+        if (numeroDaLista == 8) {
+            faseImage.image = UIImage(named: "TopDesafio")
+        }else{
+            faseImage.image = UIImage(named: "Ativo 15")
+        }
         
         faseLabel.font = UIFont.systemFont(ofSize: 26)
         faseLabel.textColor = .white
@@ -87,21 +91,25 @@ class Game1ViewController: UIViewController {
         resposta1Button.backgroundColor = .systemPurple
         resposta1Button.layer.cornerRadius = 27
         resposta1Button.tag = 1
+        resposta1Button.titleLabel?.font = UIFont.systemFont(ofSize: 40)
         resposta1Button.addTarget(self, action: #selector(resposta(_:)), for: .touchUpInside)
         
         resposta2Button.backgroundColor = .systemPurple
         resposta2Button.layer.cornerRadius = 27
         resposta2Button.tag = 2
+        resposta2Button.titleLabel?.font = UIFont.systemFont(ofSize: 40)
         resposta2Button.addTarget(self, action: #selector(resposta(_:)), for: .touchUpInside)
         
         resposta3Button.backgroundColor = .systemPurple
         resposta3Button.layer.cornerRadius = 27
         resposta3Button.tag = 3
+        resposta3Button.titleLabel?.font = UIFont.systemFont(ofSize: 40)
         resposta3Button.addTarget(self, action: #selector(resposta(_:)), for: .touchUpInside)
         
         resposta4Button.backgroundColor = .systemPurple
         resposta4Button.layer.cornerRadius = 27
         resposta4Button.tag = 4
+        resposta4Button.titleLabel?.font = UIFont.systemFont(ofSize: 40)
         resposta4Button.addTarget(self, action: #selector(resposta(_:)), for: .touchUpInside)
         
         faseImage.translatesAutoresizingMaskIntoConstraints = false

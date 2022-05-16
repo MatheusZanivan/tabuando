@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Tabuando.png",
+      "filename" : "Ativo 2Icon.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Ativo 2Icon@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Ativo 2Icon@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

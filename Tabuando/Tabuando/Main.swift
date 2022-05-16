@@ -159,9 +159,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             cell.isUserInteractionEnabled = false
             cell.faseBotao?.cadeado?.isHidden = false
             cell.faseBotao?.pontuacao?.isHidden = true
+            cell.faseBotao?.backgroundColor = .white
+            cell.faseBotao?.nomeFase?.textColor = UIColor(red: 1, green: 0.584, blue: 0, alpha: 1)
         } else {
             cell.isUserInteractionEnabled = true
             cell.faseBotao?.pontuacao?.isHidden = false
+            cell.faseBotao?.backgroundColor = UIColor(red: 1, green: 0.584, blue: 0, alpha: 1)
+            cell.faseBotao?.nomeFase?.textColor = .white
         }
 
         cell.faseBotao?.addTarget(self, action: #selector(teste(_:)), for: .touchUpInside)
@@ -204,9 +208,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         case 10:
             openGame1(numeroDaTabuada: 11)
             break
-        default:
-            openGame2(numeroDaTabuada: 12)
+        default:openGame2(numeroDaTabuada: 12)
         }
+        
         
         // mudar a cor do botão
         sender.alpha = 0.5

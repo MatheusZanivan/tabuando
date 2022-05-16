@@ -100,7 +100,7 @@ class Desafios {
         Tabuada(multiplicando: 7, multiplicador: 6, produto: 42,resposta1: 67,resposta2: 15,resposta3: 37,resposta4: 42,fase:"7x?"),
         Tabuada(multiplicando: 7, multiplicador: 7, produto: 49,resposta1: 57,resposta2: 14,resposta3: 49,resposta4: 70,fase:"7x?"),
         Tabuada(multiplicando: 7, multiplicador: 8, produto: 56,resposta1: 52,resposta2: 56,resposta3: 63,resposta4: 45,fase:"7x?"),
-        Tabuada(multiplicando: 7, multiplicador: 9, produto: 63,resposta1: 16,resposta2: 9,resposta3: 69,resposta4: 62,fase:"7x?"),
+        Tabuada(multiplicando: 7, multiplicador: 9, produto: 63,resposta1: 16,resposta2: 9,resposta3: 69,resposta4: 63,fase:"7x?"),
         Tabuada(multiplicando: 7, multiplicador: 10, produto: 70,resposta1: 63,resposta2: 56,resposta3: 7,resposta4: 70,fase:"7x?")
     ]
     static let tabuadaDoOito : [Tabuada] = [

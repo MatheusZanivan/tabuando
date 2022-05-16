@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Nome-+-logo.png",
+      "filename" : "Ativo 1Icon.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Nome-+-logo@2x.png",
+      "filename" : "Ativo 1Icon@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Nome-+-logo@3x.png",
+      "filename" : "Ativo 1Icon@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

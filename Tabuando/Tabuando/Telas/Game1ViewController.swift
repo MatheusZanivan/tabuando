@@ -66,7 +66,11 @@ class Game1ViewController: UIViewController {
         self.view.addSubview(centralizadorView)
         view.sendSubviewToBack(centralizadorView)
         
-        faseImage.image = UIImage(named: "Ativo 15")
+        if (numeroDaLista == 8) {
+            faseImage.image = UIImage(named: "TopDesafio")
+        }else{
+            faseImage.image = UIImage(named: "Ativo 15")
+        }
         
         faseLabel.font = UIFont.systemFont(ofSize: 26)
         faseLabel.textColor = .white

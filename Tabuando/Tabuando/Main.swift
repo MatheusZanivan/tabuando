@@ -204,9 +204,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         case 10:
             openGame1(numeroDaTabuada: 11)
             break
-        default:
-            openGame2(numeroDaTabuada: 12)
+        default:openGame2(numeroDaTabuada: 12)
         }
+        
         
         // mudar a cor do botão
         sender.alpha = 0.5

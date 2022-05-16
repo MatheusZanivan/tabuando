@@ -15,28 +15,37 @@ class FaseBotao: UIControl {
     public weak var cadeado: UIImageView?
     public weak var imageTitle: UIImageView?
     
-    private var image: UIImage {
-        return isLocked ? UIImage(systemName: "lock.fill")!.withTintColor(.black, renderingMode: .alwaysOriginal) : UIImage(systemName: "lock.fill")!.withTintColor(.clear, renderingMode: .alwaysOriginal)
-    }
+    var score : Int?
     
-    public var isLocked = true {
-        didSet {
-            isLocked = !isLocked
-        }
-    }
-    
+//    private var image: UIImage {
+//
+//        return isLocked ? UIImage(systemName: "lock.fill")!.withTintColor(.black, renderingMode: .alwaysOriginal) : UIImage(systemName: "lock.fill")!.withTintColor(.clear, renderingMode: .alwaysOriginal)
+//    }
+//
+//    public var isLocked = true {
+//        didSet {
+//            if isLocked {
+//                self.cadeado?.isHidden = false
+//                self.pontuacao?.isHidden = true
+//            } else {
+//                self.cadeado?.isHidden = true
+//                self.pontuacao?.isHidden = false
+//            }
+//        }
+//    }
     // construtor
     override init(frame: CGRect) {
         super.init(frame: frame)
         initComplement()
     }
-    
+
     // construtor para o storyboard
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         initComplement()
     }
     
+
     // função para inicializar as coisas
     private func initComplement() {
         let nomeFase = UILabel()
@@ -48,13 +57,17 @@ class FaseBotao: UIControl {
         addSubview(cadeado)
         
         clipsToBounds = true
-        backgroundColor = .systemGray5
+        backgroundColor = UIColor(red: 1, green: 0.584, blue: 0, alpha: 1)
+        
+        nomeFase.textColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+        
+        pontuacao.textColor = UIColor(red: 1, green: 0.871, blue: 0.363, alpha: 1)
         
         nomeFase.translatesAutoresizingMaskIntoConstraints = false
         pontuacao.translatesAutoresizingMaskIntoConstraints = false
         cadeado.translatesAutoresizingMaskIntoConstraints = false
         
-        cadeado.image = image
+//        cadeado.image = image
         
         NSLayoutConstraint.activate([
             nomeFase.centerXAnchor.constraint(equalTo: centerXAnchor),
@@ -67,8 +80,12 @@ class FaseBotao: UIControl {
             cadeado.centerYAnchor.constraint(equalTo: centerYAnchor),
         ])
         
+//        if(score){}
+        
+        
         self.nomeFase = nomeFase
         self.pontuacao = pontuacao
         self.cadeado = cadeado
+        
     }
 }

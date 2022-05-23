@@ -20,31 +20,31 @@ struct Tabuada{
 
 class Desafios {
     static let tabuadaDoUm : [Tabuada] = [
-        Tabuada(multiplicando: 1, multiplicador: 1, produto: 1, resposta1: 11,resposta2: 10,resposta3: 3,resposta4: 1,fase:"1x?"),
-        Tabuada(multiplicando: 1, multiplicador: 2, produto: 2,resposta1: 10,resposta2: 2,resposta3: 8,resposta4: 4,fase:"1x?"),
-        Tabuada(multiplicando: 1, multiplicador: 3, produto: 3,resposta1: 4,resposta2: 13,resposta3: 3,resposta4: 0,fase:"1x?"),
+        Tabuada(multiplicando: 1, multiplicador: 1, produto: 1, resposta1: 11,resposta2: 2,resposta3: 3,resposta4: 1,fase:"1x?"),
+        Tabuada(multiplicando: 1, multiplicador: 2, produto: 2,resposta1: 4,resposta2: 2,resposta3: 3,resposta4: 5,fase:"1x?"),
+        Tabuada(multiplicando: 1, multiplicador: 3, produto: 3,resposta1: 4,resposta2: 13,resposta3: 3,resposta4: 6,fase:"1x?"),
         Tabuada(multiplicando: 1, multiplicador: 4, produto: 4,resposta1: 4,resposta2: 2,resposta3: 8,resposta4: 6,fase:"1x?"),
         Tabuada(multiplicando: 1, multiplicador: 5, produto: 5,resposta1: 6,resposta2: 5,resposta3: 15,resposta4: 3,fase:"1x?"),
         Tabuada(multiplicando: 1, multiplicador: 6, produto: 6,resposta1: 6,resposta2: 3,resposta3: 9,resposta4: 12,fase:"1x?"),
-        Tabuada(multiplicando: 1, multiplicador: 7, produto: 7,resposta1: 14,resposta2: 5,resposta3: 6,resposta4: 7,fase:"1x?"),
-        Tabuada(multiplicando: 1, multiplicador: 8, produto: 8,resposta1: 4,resposta2: 12,resposta3: 5,resposta4: 8,fase:"1x?"),
+        Tabuada(multiplicando: 1, multiplicador: 7, produto: 7,resposta1: 14,resposta2: 17,resposta3: 6,resposta4: 7,fase:"1x?"),
+        Tabuada(multiplicando: 1, multiplicador: 8, produto: 8,resposta1: 4,resposta2: 12,resposta3: 15,resposta4: 8,fase:"1x?"),
         Tabuada(multiplicando: 1, multiplicador: 9, produto: 9,resposta1: 9,resposta2: 3,resposta3: 6,resposta4: 18,fase:"1x?"),
-        Tabuada(multiplicando: 1, multiplicador: 10, produto: 10,resposta1: 9,resposta2: 5,resposta3: 10,resposta4: 0,fase:"1x?")
+        Tabuada(multiplicando: 1, multiplicador: 10, produto: 10,resposta1: 9,resposta2: 5,resposta3: 100,resposta4: 11,fase:"1x?")
     ]
     static let tabuadaDoDois : [Tabuada] = [
         Tabuada(multiplicando: 2, multiplicador: 1, produto: 2, resposta1: 2,resposta2: 12,resposta3: 4,resposta4: 10,fase:"2x?"),
-        Tabuada(multiplicando: 2, multiplicador: 2, produto: 4,resposta1: 10,resposta2: 8,resposta3: 4,resposta4: 0,fase:"2x?"),
-        Tabuada(multiplicando: 2, multiplicador: 3, produto: 6,resposta1: 6,resposta2: 9,resposta3: 3,resposta4: 8,fase:"2x?"),
-        Tabuada(multiplicando: 2, multiplicador: 4, produto: 8,resposta1: 11,resposta2: 7,resposta3: 13,resposta4: 8,fase:"2x?"),
-        Tabuada(multiplicando: 2, multiplicador: 5, produto: 10,resposta1: 15,resposta2: 11,resposta3: 3,resposta4: 10,fase:"2x?"),
-        Tabuada(multiplicando: 2, multiplicador: 6, produto: 12,resposta1: 12,resposta2: 10,resposta3: 16,resposta4: 24,fase:"2x?"),
+        Tabuada(multiplicando: 2, multiplicador: 2, produto: 4,resposta1: 10,resposta2: 8,resposta3: 4,resposta4: 22,fase:"2x?"),
+        Tabuada(multiplicando: 2, multiplicador: 3, produto: 6,resposta1: 6,resposta2: 9,resposta3: 5,resposta4: 23,fase:"2x?"),
+        Tabuada(multiplicando: 2, multiplicador: 4, produto: 8,resposta1: 24,resposta2: 6,resposta3: 12,resposta4: 8,fase:"2x?"),
+        Tabuada(multiplicando: 2, multiplicador: 5, produto: 10,resposta1: 15,resposta2: 25,resposta3: 5,resposta4: 10,fase:"2x?"),
+        Tabuada(multiplicando: 2, multiplicador: 6, produto: 12,resposta1: 12,resposta2: 26,resposta3: 16,resposta4: 24,fase:"2x?"),
         Tabuada(multiplicando: 2, multiplicador: 7, produto: 14,resposta1: 7,resposta2: 21,resposta3: 14,resposta4: 24,fase:"2x?"),
-        Tabuada(multiplicando: 2, multiplicador: 8, produto: 16,resposta1: 12,resposta2: 16,resposta3: 18,resposta4: 8,fase:"2x?"),
+        Tabuada(multiplicando: 2, multiplicador: 8, produto: 16,resposta1: 28,resposta2: 16,resposta3: 18,resposta4: 8,fase:"2x?"),
         Tabuada(multiplicando: 2, multiplicador: 9, produto: 18,resposta1: 18,resposta2: 11,resposta3: 3,resposta4: 6,fase:"2x?"),
         Tabuada(multiplicando: 2, multiplicador: 10, produto: 20,resposta1: 12,resposta2: 10,resposta3: 20,resposta4: 0,fase:"2x?")
     ]
     static let tabuadaDoTres : [Tabuada] = [
-        Tabuada(multiplicando: 3, multiplicador: 1, produto: 3, resposta1: 3,resposta2: 2,resposta3: 6,resposta4: 0,fase:"3x?"),
+        Tabuada(multiplicando: 3, multiplicador: 1, produto: 3, resposta1: 3,resposta2: 2,resposta3: 6,resposta4: 4,fase:"3x?"),
         Tabuada(multiplicando: 3, multiplicador: 2, produto: 6,resposta1: 8,resposta2: 3,resposta3: 9,resposta4: 6,fase:"3x?"),
         Tabuada(multiplicando: 3, multiplicador: 3, produto: 9,resposta1: 11,resposta2: 6,resposta3: 9,resposta4: 13,fase:"3x?"),
         Tabuada(multiplicando: 3, multiplicador: 4, produto: 12,resposta1: 12,resposta2: 9,resposta3: 13,resposta4: 14,fase:"3x?"),
@@ -53,7 +53,7 @@ class Desafios {
         Tabuada(multiplicando: 3, multiplicador: 7, produto: 21,resposta1: 14,resposta2: 11,resposta3: 7,resposta4: 21,fase:"3x?"),
         Tabuada(multiplicando: 3, multiplicador: 8, produto: 24,resposta1: 24,resposta2: 3,resposta3: 4,resposta4: 8,fase:"3x?"),
         Tabuada(multiplicando: 3, multiplicador: 9, produto: 27,resposta1: 9,resposta2: 21,resposta3: 27,resposta4: 1,fase:"3x?"),
-        Tabuada(multiplicando: 3, multiplicador: 10, produto: 30,resposta1: 13,resposta2: 30,resposta3: 3,resposta4: 0,fase:"3x?")
+        Tabuada(multiplicando: 3, multiplicador: 10, produto: 30,resposta1: 13,resposta2: 30,resposta3: 3,resposta4: 13,fase:"3x?")
     ]
     static let tabuadaDoQuatro : [Tabuada] = [
         Tabuada(multiplicando: 4, multiplicador: 1, produto: 4, resposta1: 4,resposta2: 12,resposta3: 2,resposta4: 8,fase:"4x?"),
@@ -73,14 +73,14 @@ class Desafios {
         Tabuada(multiplicando: 5, multiplicador: 3, produto: 15,resposta1: 8,resposta2: 12,resposta3: 3,resposta4: 15,fase:"5x?"),
         Tabuada(multiplicando: 5, multiplicador: 4, produto: 20,resposta1: 14,resposta2: 15,resposta3: 20,resposta4: 30,fase:"5x?"),
         Tabuada(multiplicando: 5, multiplicador: 5, produto: 25,resposta1: 15,resposta2: 25,resposta3: 16,resposta4: 10,fase:"5x?"),
-        Tabuada(multiplicando: 5, multiplicador: 6, produto: 30,resposta1: 31,resposta2: 12,resposta3: 30,resposta4: 0,fase:"5x?"),
+        Tabuada(multiplicando: 5, multiplicador: 6, produto: 30,resposta1: 31,resposta2: 12,resposta3: 30,resposta4: 55,fase:"5x?"),
         Tabuada(multiplicando: 5, multiplicador: 7, produto: 35,resposta1: 30,resposta2: 35,resposta3: 15,resposta4: 3,fase:"5x?"),
         Tabuada(multiplicando: 5, multiplicador: 8, produto: 40,resposta1: 13,resposta2: 16,resposta3: 44,resposta4: 40,fase:"5x?"),
         Tabuada(multiplicando: 5, multiplicador: 9, produto: 45,resposta1: 45,resposta2: 9,resposta3: 14,resposta4: 40,fase:"5x?"),
         Tabuada(multiplicando: 5, multiplicador: 10, produto: 50,resposta1: 11,resposta2: 15,resposta3: 3,resposta4: 50,fase:"5x?")
     ]
     static let tabuadaDoSeis : [Tabuada] = [
-        Tabuada(multiplicando: 6, multiplicador: 1, produto: 6, resposta1: 12,resposta2: 6,resposta3: 3,resposta4: 0,fase:"6x?"),
+        Tabuada(multiplicando: 6, multiplicador: 1, produto: 6, resposta1: 12,resposta2: 6,resposta3: 3,resposta4: 7,fase:"6x?"),
         Tabuada(multiplicando: 6, multiplicador: 2, produto: 12,resposta1: 2,resposta2: 6,resposta3: 9,resposta4: 12,fase:"6x?"),
         Tabuada(multiplicando: 6, multiplicador: 3, produto: 18,resposta1: 18,resposta2: 16,resposta3: 3,resposta4: 9,fase:"6x?"),
         Tabuada(multiplicando: 6, multiplicador: 4, produto: 24,resposta1: 46,resposta2: 24,resposta3: 64,resposta4: 20,fase:"6x?"),

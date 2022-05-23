@@ -60,7 +60,7 @@ class FaseBotao: UIControl {
         backgroundColor = UIColor(red: 1, green: 0.584, blue: 0, alpha: 1)
         
         nomeFase.textColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
-        nomeFase.font = UIFont(name: "SFProText-Semibold", size: 30)
+        nomeFase.font = UIFont(name: "SFProText-Semibold", size: 50)
         
         pontuacao.textColor = UIColor(red: 1, green: 0.871, blue: 0.363, alpha: 1)
         

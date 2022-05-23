@@ -144,11 +144,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.backgroundColor = .clear
         cell.faseBotao?.nomeFase?.text = fases[indexPath.row].nivel
         cell.faseBotao?.tag = indexPath.row
-        cell.faseBotao?.cadeado?.image = UIImage(systemName: "lock.fill")!.withTintColor(.black, renderingMode: .alwaysOriginal)
+        cell.faseBotao?.cadeado?.image = UIImage(systemName: "lock.fill")!.withTintColor(.systemOrange, renderingMode: .alwaysOriginal)
         cell.faseBotao?.cadeado?.isHidden = true
        
         if(score > 0){
             cell.faseBotao?.pontuacao?.text = String(score) + "\(barraDez)"
+            
         }
 
         if(UserDefaults.standard.bool(forKey: fases[indexPath.row].nome) == true){

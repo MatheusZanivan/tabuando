@@ -29,6 +29,7 @@ class Game2ViewController: UIViewController {
     var questionNumber = 0
     var score = 0
     var recebeNumero = 0
+    var actualAnswer : String?
     
     var numeroFoiSorteado = [true,false,false,false,false,false,false,false,false,false]
     //bloco a ser carregado assim que a tela for inicializada
@@ -179,8 +180,15 @@ class Game2ViewController: UIViewController {
         
     }
     
+    
     func submitAnswer(userAnswer: String, sender: UIButton){
-        let actualAnswer = listaDeTabuadas[questionNumber].answer
+        let produto = tabuada2.multiplicando * tabuada2.multiplicador
+        if(produto == tabuada2.produto){
+            actualAnswer = "True"
+        }
+        else{
+            actualAnswer = "False"
+        }
         
 //        print(userAnswer)
 //        print(actualAnswer)
